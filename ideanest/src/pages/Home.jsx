@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Zap, TrendingUp, Users, Code, Lightbulb, Target, Award, FileText, Shield, PenTool, DollarSign, Monitor, Megaphone, Star, Quote, CheckCircle, ArrowRight } from 'lucide-react'
+import herovideo from '../assets/hero.mp4'
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -8,6 +9,7 @@ const Home = () => {
   const [raisedCount, setRaisedCount] = useState(0)
   const [successCount, setSuccessCount] = useState(0)
   const [teamCount, setTeamCount] = useState(0)
+
 
   // Slider data
   const slides = [
@@ -30,6 +32,7 @@ const Home = () => {
       icon: Users
     }
   ]
+
 
   // Services data
   const services = [
@@ -92,6 +95,7 @@ const Home = () => {
     }
   ]
 
+
   // Handle scroll animation
   useEffect(() => {
     const handleScroll = () => {
@@ -101,6 +105,7 @@ const Home = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+
   // Auto-advance slider
   useEffect(() => {
     const timer = setInterval(() => {
@@ -109,12 +114,14 @@ const Home = () => {
     return () => clearInterval(timer)
   }, [])
 
+
   // Animate counters
   useEffect(() => {
     const animateCounter = (setter, target, duration = 2000) => {
       const increment = target / (duration / 16) // 60fps
       let current = 0
       let timer
+
 
       const animate = () => {
         timer = setInterval(() => {
@@ -135,11 +142,14 @@ const Home = () => {
         }, 16)
       }
 
+
       animate()
       return () => clearInterval(timer)
     }
 
+
     const timers = []
+
 
     // Start animations when component mounts
     const timeout = setTimeout(() => {
@@ -151,26 +161,42 @@ const Home = () => {
       )
     }, 500) // Small delay to ensure component is rendered
 
+
     return () => {
       clearTimeout(timeout)
       timers.forEach(cleanup => cleanup && cleanup())
     }
   }, [])
 
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
+
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
+
   return (
     <div className="bg-white">
-      {/* Hero Section with 3D Parallax */}
+      {/* Hero Section with Video Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        {/* Video Background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          src={herovideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+          style={{opacity: 0.35}}
+        ></video>
+
         {/* Animated background shapes */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-5 pointer-events-none">
           <div 
             className="absolute top-20 -left-40 w-80 h-80 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
@@ -184,6 +210,7 @@ const Home = () => {
             style={{ transform: `translateY(${scrollY * 0.7}px)` }}
           ></div>
         </div>
+
 
         {/* Hero content */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -212,11 +239,13 @@ const Home = () => {
           </div>
         </div>
 
+
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
           <div className="text-yellow-500 text-4xl">↓</div>
         </div>
       </section>
+
 
       {/* Slider Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
@@ -229,6 +258,7 @@ const Home = () => {
               Discover how we transform startups into thriving businesses
             </p>
           </div>
+
 
           {/* Slider */}
           <div className="relative h-96 sm:h-[500px] rounded-2xl overflow-hidden bg-white shadow-2xl">
@@ -259,6 +289,7 @@ const Home = () => {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black opacity-20"></div>
                     </div>
 
+
                     {/* Content */}
                     <div className="flex flex-col justify-center items-start p-8 sm:p-12 bg-gradient-to-br from-white to-gray-50">
                       <div className="mb-6">
@@ -279,6 +310,7 @@ const Home = () => {
               )
             })}
 
+
             {/* Navigation buttons */}
             <button
               onClick={prevSlide}
@@ -292,6 +324,7 @@ const Home = () => {
             >
               <ChevronRight className="w-6 h-6" />
             </button>
+
 
             {/* Indicators */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
@@ -311,6 +344,7 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* Services Section with 3D Cards */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -322,6 +356,7 @@ const Home = () => {
               Comprehensive solutions tailored for startup success
             </p>
           </div>
+
 
           {/* Services grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -345,11 +380,13 @@ const Home = () => {
                   {/* Card background */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-all duration-300`}></div>
 
+
                   {/* Card content */}
                   <div className="relative h-full bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-yellow-400 hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2">
                     <div className="absolute -top-6 left-8 w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-8 h-8 text-gray-900" />
                     </div>
+
 
                     <div className="mt-12 h-full flex flex-col justify-between">
                       <div>
@@ -371,6 +408,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
 
       {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-50 to-orange-50">
@@ -398,6 +436,7 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* About Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -410,6 +449,7 @@ const Home = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Founded with a vision to empower the next generation of entrepreneurs, IdeaNest has been at the forefront of startup innovation since 2018. We believe that every great business starts with a great idea, and our mission is to provide the tools, guidance, and support needed to turn those ideas into reality.
               </p>
+
 
               {/* Values */}
               <div className="space-y-4 mb-8">
@@ -436,10 +476,12 @@ const Home = () => {
                 </div>
               </div>
 
+
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
                 Learn More About Us
               </button>
             </div>
+
 
             {/* Image */}
             <div className="relative">
@@ -451,6 +493,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
+
 
               {/* Floating stats */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100">
@@ -464,6 +507,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+
 
               <div className="absolute -top-6 -right-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100">
                 <div className="flex items-center gap-4">
@@ -481,6 +525,7 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
@@ -492,6 +537,7 @@ const Home = () => {
               Hear from the startups that have transformed their businesses with IdeaNest
             </p>
           </div>
+
 
           {/* Testimonials Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -525,11 +571,14 @@ const Home = () => {
                   ))}
                 </div>
 
+
                 <Quote className="w-8 h-8 text-yellow-400 mb-4" />
+
 
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   "{testimonial.text}"
                 </p>
+
 
                 <div className="flex items-center gap-4">
                   <img
@@ -548,7 +597,6 @@ const Home = () => {
         </div>
       </section>
 
-  
 
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-50 to-orange-50">
@@ -562,6 +610,7 @@ const Home = () => {
             </p>
           </div>
 
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -571,6 +620,7 @@ const Home = () => {
               <p className="text-gray-600">Get expert advice tailored to your startup needs</p>
             </div>
 
+
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-gray-900" />
@@ -578,6 +628,7 @@ const Home = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Strategic Planning</h3>
               <p className="text-gray-600">Develop a comprehensive roadmap for success</p>
             </div>
+
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -587,6 +638,7 @@ const Home = () => {
               <p className="text-gray-600">Continuous guidance as your business grows</p>
             </div>
           </div>
+
 
           <div className="text-center">
             <button className="px-10 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105 mr-4">
@@ -598,6 +650,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
 
       {/* Add animation styles */}
       <style jsx>{`
@@ -613,13 +666,16 @@ const Home = () => {
           }
         }
 
+
         .animate-blob {
           animation: blob 7s infinite;
         }
 
+
         .animation-delay-2000 {
           animation-delay: 2s;
         }
+
 
         .animation-delay-4000 {
           animation-delay: 4s;
@@ -628,5 +684,6 @@ const Home = () => {
     </div>
   )
 }
+
 
 export default Home
