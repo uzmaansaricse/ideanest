@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Zap, TrendingUp, Users, Code, Lightbulb, Target, Award, FileText, Shield, PenTool, DollarSign, Monitor, Megaphone, Star, Quote, CheckCircle, ArrowRight } from 'lucide-react'
 import herovideo from '../assets/hero.mp4'
+import ClutchBadges from '../components/Clutchbadges'
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [scrollY, setScrollY] = useState(0)
   const [startupsCount, setStartupsCount] = useState(0)
-  const [raisedCount, setRaisedCount] = useState(0)
+ 
   const [successCount, setSuccessCount] = useState(0)
-  const [teamCount, setTeamCount] = useState(0)
+  const [MembersCount, setMembersCount] = useState(0)
 
 
   // Slider data
@@ -26,8 +27,8 @@ const Home = () => {
       icon: TrendingUp
     },
     {
-      title: "Build Exceptional Teams",
-      description: "Connect with talented professionals and build a team that drives innovation",
+      title: "Build Exceptional Memberss",
+      description: "Connect with talented professionals and build a Members that drives innovation",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
       icon: Users
     }
@@ -154,12 +155,12 @@ const Home = () => {
     // Start animations when component mounts
     const timeout = setTimeout(() => {
       timers.push(
-        animateCounter(setStartupsCount, 500),
-        animateCounter(setRaisedCount, 2000), // $2B
-        animateCounter(setSuccessCount, 95),
-        animateCounter(setTeamCount, 50)
+        animateCounter(setStartupsCount, 2500),
+      
+        animateCounter(setSuccessCount, 85),
+        animateCounter(setMembersCount, 50)
       )
-    }, 500) // Small delay to ensure component is rendered
+    }, 50) // Small delay to ensure component is rendered
 
 
     return () => {
@@ -232,7 +233,7 @@ const Home = () => {
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="px-8 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg hover:bg-yellow-50 transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg bg-gray-900 transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -240,11 +241,16 @@ const Home = () => {
         </div>
 
 
+        
+
+
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
           <div className="text-yellow-500 text-4xl">↓</div>
         </div>
       </section>
+
+      <ClutchBadges/>
 
 
       {/* Slider Section */}
@@ -416,9 +422,9 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { count: startupsCount, suffix: "+", label: "Startups Helped" },
-              { count: raisedCount, suffix: "B+", prefix: "$", label: "Total Raised" },
+              { count: '1', suffix: "Cr+", prefix: "₹", label: "Total Raised" },
               { count: successCount, suffix: "%", label: "Success Rate" },
-              { count: teamCount, suffix: "+", label: "Team Members" }
+              { count: MembersCount, suffix: "+", label: "Members Members" }
             ].map((stat, index) => (
               <div
                 key={index}
@@ -488,7 +494,7 @@ const Home = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
-                  alt="IdeaNest Team"
+                  alt="IdeaNest Members"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -503,7 +509,7 @@ const Home = () => {
                   </div>
                   <div>
                     <div className="text-2xl font-black text-gray-900">50+</div>
-                    <div className="text-sm text-gray-600">Expert Team</div>
+                    <div className="text-sm text-gray-600">Expert Members</div>
                   </div>
                 </div>
               </div>
@@ -561,7 +567,7 @@ const Home = () => {
                 company: "EduTech Innovations",
                 image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
                 rating: 5,
-                text: "From GST registration to trademark protection, IdeaNest handled everything professionally. Their web development team created an amazing platform for us."
+                text: "From GST registration to trademark protection, IdeaNest handled everything professionally. Their web development Members created an amazing platform for us."
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
