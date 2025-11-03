@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../public/logo.png'
 
 const Navbar = () => {
@@ -42,29 +43,38 @@ const Navbar = () => {
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex list-none gap-8 m-0 p-0">
             <li className="relative group">
-              <a 
-                href="#home" 
+              <Link
+                to="/"
                 className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="relative group">
-              <a 
-                href="#services" 
+              <a
+                href="#services"
                 className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
               >
                 Services
               </a>
             </li>
             <li className="relative group">
-              <a 
-                href="#contact" 
+              <Link
+                to="/refund-policy"
+                className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
+              >
+                Refund Policy
+              </Link>
+            </li>
+            <li className="relative group">
+              <Link
+                to="/contact"
                 className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
               >
                 Contact
-              </a>
+              </Link>
             </li>
+            
           </ul>
         </div>
 
@@ -74,32 +84,42 @@ const Navbar = () => {
         >
           <ul className="flex flex-col bg-yellow-50 border-t-2 border-yellow-400 m-0 p-0">
             <li>
-              <a 
-                href="#home" 
+              <Link
+                to="/"
                 onClick={closeMenu}
                 className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#services" 
+              <a
+                href="#services"
                 onClick={closeMenu}
                 className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
               >
                 Services
               </a>
             </li>
+              <li>
+              <Link
+                to="/refund-policy"
+                onClick={closeMenu}
+                className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
+              >
+                Refund Policy
+              </Link>
+            </li>
             <li>
-              <a 
-                href="#contact" 
+              <Link
+                to="/contact"
                 onClick={closeMenu}
                 className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
               >
                 Contact
-              </a>
+              </Link>
             </li>
+          
           </ul>
         </div>
       </div>
