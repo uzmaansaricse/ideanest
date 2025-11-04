@@ -8,7 +8,7 @@ const Certificates = () => {
     {
       id: 1,
       title: "Trademark Registration",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_c28b584fbd534a57b22a998b764585ec~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "INCORPORATION CERTIFICATE/ PARTNERSHIP DEED",
         "PAN CARD (COMPANY/ DIRECTOR)",
@@ -21,7 +21,7 @@ const Certificates = () => {
     {
       id: 2,
       title: "IEC Registration",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_8b1c36fd6484422c97fd22472a895945~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "PAN CARD (COMPANY/ DIRECTOR)",
         "AADHAR CARD (DIRECTOR)",
@@ -36,7 +36,7 @@ const Certificates = () => {
     {
       id: 3,
       title: "ISO Certification",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_e3c9afeeb5734e0395160f01fae388a5~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "ISO (NON - IAF)",
         "COMPANY INCORPORATION CERTIFICATE",
@@ -53,7 +53,7 @@ const Certificates = () => {
     {
       id: 4,
       title: "MSME Registration",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_d69cacef31a44f6a974e7ef1e1ca05ea~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "PAN CARD (COMPANY/ DIRECTOR)",
         "DIRECTOR KYC DOCUMENTS",
@@ -66,7 +66,7 @@ const Certificates = () => {
     {
       id: 5,
       title: "FSSAI Registration",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_94a445b52cd946eeb1249ef1635adc3c~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "PAN CARD (COMPANY/ DIRECTOR)",
         "DIRECTOR KYC DOCUMENTS",
@@ -79,7 +79,7 @@ const Certificates = () => {
     {
       id: 6,
       title: "Startup Tax Exemption",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_5a40ee1640194dc2b9bf448f154cdfce~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "CREDENTIALS FOR THE START-UP",
         "PAN CARD COMPANY",
@@ -92,7 +92,7 @@ const Certificates = () => {
     {
       id: 7,
       title: "Company Incorporation",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_9bedfd7ec9824f0b8bbb2dd7895f88d1~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "DOCUMENTS REQUIRED FROM DIRECTOR AND SUBSCRIBERS",
         "PHOTOGRAPH",
@@ -106,7 +106,7 @@ const Certificates = () => {
     {
       id: 8,
       title: "GST Registration",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_6bfe4cd75008471993951d3056af4645~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "INCORPORATION CERTIFICATE",
         "AADHAR AND PAN CARD OF ALL DIRECTORS CONTACT DETAILS",
@@ -118,7 +118,7 @@ const Certificates = () => {
     {
       id: 9,
       title: "Startup India Registration",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      image: "https://static.wixstatic.com/media/41e262_2843aa118b2b479e86cab5e1f34dc7ca~mv2.jpg/v1/fill/w_614,h_464,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state_edited.jpg",
       documents: [
         "COMPANY INCORPORATION CERTIFICATE",
         "PAN CARD COMPANY",
