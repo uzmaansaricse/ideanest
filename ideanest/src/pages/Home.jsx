@@ -5,9 +5,10 @@ import ClutchBadges from '../components/Clutchbadges'
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [scrollY, setScrollY] = useState(0)
   const [startupsCount, setStartupsCount] = useState(0)
- 
+
   const [successCount, setSuccessCount] = useState(0)
   const [MembersCount, setMembersCount] = useState(0)
 
@@ -27,7 +28,7 @@ const Home = () => {
       icon: TrendingUp
     },
     {
-      title: "Build Exceptional Memberss",
+      title: "Build Exceptional Members",
       description: "Connect with talented professionals and build a Members that drives innovation",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
       icon: Users
@@ -111,6 +112,39 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  // Testimonials data
+  const testimonials = [
+    {
+      name: "ROSHAN KUMAR",
+      company: "Startup Founder",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      rating: 5,
+      text: "Best services, affordable prices and amazing team to support start ups for best digital solutions."
+    },
+    {
+      name: "AAYUSH PANDEY",
+      company: "Startup Founder",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      rating: 5,
+      text: "I'm really impressed by the professionalism and quality of products delivered. I would highly recommend upcoming startups to opt for their services."
+    },
+    {
+      name: "Client",
+      company: "Startup Founder",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      rating: 5,
+      text: "I highly recommend IDEANEST to anyone looking for topnotch service and a memorable experience."
+    }
+  ]
+
+  // Auto-advance testimonials
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
     }, 5000)
     return () => clearInterval(timer)
   }, [])
@@ -544,61 +578,72 @@ const Home = () => {
             </p>
           </div>
 
+          {/* Testimonials Slider */}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Testimonials */}
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className={`transition-opacity duration-1000 ${
+                  index === currentTestimonial ? 'opacity-100' : 'opacity-0'
+                } ${index === currentTestimonial ? 'block' : 'hidden'}`}
+              >
+                <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-lg border border-gray-100 text-center">
+                  <div className="flex items-center justify-center mb-6">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Sarah Chen",
-                company: "TechFlow Solutions",
-                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-                rating: 5,
-                text: "IdeaNest helped us secure $2M in funding and scale from 5 to 50 employees in just 18 months. Their strategic guidance was invaluable."
-              },
-              {
-                name: "Marcus Rodriguez",
-                company: "GreenEnergy Corp",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-                rating: 5,
-                text: "The ISO certification process was seamless thanks to IdeaNest's expertise. We've seen a 40% increase in client trust and partnerships."
-              },
-              {
-                name: "Priya Patel",
-                company: "EduTech Innovations",
-                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-                rating: 5,
-                text: "From GST registration to trademark protection, IdeaNest handled everything professionally. Their web development Members created an amazing platform for us."
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+                  <Quote className="w-12 h-12 text-yellow-400 mx-auto mb-6" />
 
+                  <p className="text-gray-600 mb-8 leading-relaxed text-lg max-w-2xl mx-auto">
+                    "{testimonial.text}"
+                  </p>
 
-                <Quote className="w-8 h-8 text-yellow-400 mb-4" />
-
-
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  "{testimonial.text}"
-                </p>
-
-
-                <div className="flex items-center gap-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <div className="font-bold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-600">{testimonial.company}</div>
+                  <div className="flex items-center justify-center gap-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
+                      <div className="text-sm text-gray-600">{testimonial.company}</div>
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
+
+            {/* Navigation buttons */}
+            <button
+              onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-20 bg-yellow-400 hover:bg-yellow-500 text-gray-900 p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-yellow-400/50"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-20 bg-yellow-400 hover:bg-yellow-500 text-gray-900 p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-yellow-400/50"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Indicators */}
+            <div className="flex justify-center gap-2 mt-8">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentTestimonial
+                      ? 'bg-yellow-500 w-8'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

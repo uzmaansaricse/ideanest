@@ -16,14 +16,14 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b-4 border-yellow-400 shadow-lg shadow-yellow-400/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           
           {/* Logo Section */}
           <div className="flex items-center gap-3 cursor-pointer hover:scale-105 transition-transform duration-300">
             <img 
               src={logo} 
               alt="IdeaNest Logo" 
-              className="h-12 w-auto hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] transition-all duration-300"
+              className="h-24 w-auto hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] transition-all duration-300"
             />
             <span className="text-2xl font-bold text-yellow-500 tracking-wide hidden sm:inline">
               IdeaNest
@@ -60,6 +60,14 @@ const Navbar = () => {
             </li>
             <li className="relative group">
               <Link
+                to="/career"
+                className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
+              >
+                Career
+              </Link>
+            </li>
+                <li className="relative group">
+              <Link
                 to="/refund-policy"
                 className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
               >
@@ -74,7 +82,7 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            
+
           </ul>
         </div>
 
@@ -101,7 +109,16 @@ const Navbar = () => {
                 Services
               </a>
             </li>
-              <li>
+            <li>
+              <Link
+                to="/career"
+                onClick={closeMenu}
+                className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
+              >
+                Career
+              </Link>
+            </li>
+                 <li>
               <Link
                 to="/refund-policy"
                 onClick={closeMenu}
@@ -110,6 +127,8 @@ const Navbar = () => {
                 Refund Policy
               </Link>
             </li>
+
+
             <li>
               <Link
                 to="/contact"
@@ -119,7 +138,7 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-          
+
           </ul>
         </div>
       </div>

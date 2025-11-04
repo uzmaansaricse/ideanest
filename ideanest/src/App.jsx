@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
+import Career from './pages/Career'
 import RefundPolicy from './pages/RefundPolicy'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Footer from './components/Footer'
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
       </Routes>
 
