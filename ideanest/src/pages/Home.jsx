@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, Zap, TrendingUp, Users, Code, Lightbulb, Target, Award, FileText, Shield, PenTool, DollarSign, Monitor, Megaphone, Star, Quote, CheckCircle, ArrowRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Zap, TrendingUp, Users, Code, Lightbulb, Target, Award, FileText, Shield, PenTool, DollarSign, Monitor, Megaphone, Star, Quote, CheckCircle, ArrowRight, Globe, Briefcase } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import herovideo from '../assets/hero.mp4'
 import ClutchBadges from '../components/Clutchbadges'
+
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -9,8 +11,10 @@ const Home = () => {
   const [scrollY, setScrollY] = useState(0)
   const [startupsCount, setStartupsCount] = useState(0)
 
+
   const [successCount, setSuccessCount] = useState(0)
   const [MembersCount, setMembersCount] = useState(0)
+
 
 
   // Slider data
@@ -28,74 +32,59 @@ const Home = () => {
       icon: TrendingUp
     },
     {
-      title: "Build Exceptional Members",
-      description: "Connect with talented professionals and build a Members that drives innovation",
+      title: "Build Exceptional Teams",
+      description: "Connect with talented professionals and build a team that drives innovation",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
       icon: Users
     }
   ]
 
 
-  // Services data
+
+  // Services data - Only 5 main services
   const services = [
-   
     {
-      id: 4,
-      title: "Startup India Certificate",
-      description: "Official recognition and benefits under the Startup India initiative",
-      icon: Award,
-      color: "from-red-400 to-pink-400"
-    },
-    {
-      id: 5,
-      title: "MSME Certificate",
-      description: "Micro, Small and Medium Enterprises registration for government benefits",
-      icon: FileText,
-      color: "from-pink-400 to-purple-400"
-    },
-    {
-      id: 6,
-      title: "GST Registration",
-      description: "Complete GST compliance and registration services for your business",
-      icon: Shield,
-      color: "from-purple-400 to-indigo-400"
-    },
-    {
-      id: 7,
-      title: "ISO 9001:2015 Certification",
-      description: "Quality management system certification for international standards",
-      icon: PenTool,
-      color: "from-indigo-400 to-blue-400"
-    },
-    {
-      id: 8,
-      title: "Trademark & Company Registration",
-      description: "Legal protection for your brand and complete company incorporation",
-      icon: DollarSign,
-      color: "from-blue-400 to-cyan-400"
-    },
-    {
-      id: 9,
-      title: "Funding & Investment Support",
-      description: "Connect with investors and secure funding for your startup growth",
-      icon: Monitor,
-      color: "from-cyan-400 to-teal-400"
-    },
-    {
-      id: 10,
-      title: "Web Design & Development",
+      id: 1,
+      title: "Web Development",
       description: "Professional website creation and digital presence enhancement",
-      icon: Megaphone,
-      color: "from-teal-400 to-green-400"
+      icon: Globe,
+      color: "from-blue-400 to-cyan-400",
+      path: "/web-development"
     },
     {
-      id: 11,
+      id: 2,
+      title: "Start your business",
+      description: "Complete business registration and compliance solutions",
+      icon: Briefcase,
+      color: "from-purple-400 to-pink-400",
+      path: "/start-business"
+    },
+    {
+      id: 3,
       title: "Digital Marketing",
       description: "Comprehensive online marketing strategies to boost your brand visibility",
       icon: TrendingUp,
-      color: "from-green-400 to-lime-400"
+      color: "from-green-400 to-teal-400",
+      path: "/digital-marketing"
+    },
+    {
+      id: 4,
+      title: "Certificates",
+      description: "Complete certification and registration services for your business",
+      icon: Award,
+      color: "from-orange-400 to-red-400",
+      path: "/certificates"
+    },
+    {
+      id: 5,
+      title: "Funding",
+      description: "Connect with investors and secure funding for your startup growth",
+      icon: DollarSign,
+      color: "from-yellow-400 to-orange-400",
+      path: "/funding"
     }
   ]
+
 
 
   // Handle scroll animation
@@ -108,6 +97,7 @@ const Home = () => {
   }, [])
 
 
+
   // Auto-advance slider
   useEffect(() => {
     const timer = setInterval(() => {
@@ -115,6 +105,7 @@ const Home = () => {
     }, 5000)
     return () => clearInterval(timer)
   }, [])
+
 
   // Testimonials data
   const testimonials = [
@@ -141,6 +132,7 @@ const Home = () => {
     }
   ]
 
+
   // Auto-advance testimonials
   useEffect(() => {
     const timer = setInterval(() => {
@@ -150,12 +142,14 @@ const Home = () => {
   }, [])
 
 
+
   // Animate counters
   useEffect(() => {
     const animateCounter = (setter, target, duration = 2000) => {
       const increment = target / (duration / 16) // 60fps
       let current = 0
       let timer
+
 
 
       const animate = () => {
@@ -178,12 +172,15 @@ const Home = () => {
       }
 
 
+
       animate()
       return () => clearInterval(timer)
     }
 
 
+
     const timers = []
+
 
 
     // Start animations when component mounts
@@ -197,6 +194,7 @@ const Home = () => {
     }, 50) // Small delay to ensure component is rendered
 
 
+
     return () => {
       clearTimeout(timeout)
       timers.forEach(cleanup => cleanup && cleanup())
@@ -204,14 +202,17 @@ const Home = () => {
   }, [])
 
 
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
 
 
+
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
+
 
 
   return (
@@ -230,6 +231,7 @@ const Home = () => {
           style={{opacity: 0.35}}
         ></video>
 
+
         {/* Animated background shapes */}
         <div className="absolute inset-0 overflow-hidden z-5 pointer-events-none">
           <div 
@@ -245,6 +247,7 @@ const Home = () => {
             style={{ transform: `translateY(${scrollY * 0.7}px)` }}
           ></div>
         </div>
+
 
 
         {/* Hero content */}
@@ -275,7 +278,9 @@ const Home = () => {
         </div>
 
 
+
         
+
 
 
         {/* Scroll indicator */}
@@ -284,7 +289,9 @@ const Home = () => {
         </div>
       </section>
 
+
       <ClutchBadges/>
+
 
 
       {/* Slider Section */}
@@ -298,6 +305,7 @@ const Home = () => {
               Discover how we transform startups into thriving businesses
             </p>
           </div>
+
 
 
           {/* Slider */}
@@ -330,6 +338,7 @@ const Home = () => {
                     </div>
 
 
+
                     {/* Content */}
                     <div className="flex flex-col justify-center items-start p-8 sm:p-12 bg-gradient-to-br from-white to-gray-50">
                       <div className="mb-6">
@@ -351,6 +360,7 @@ const Home = () => {
             })}
 
 
+
             {/* Navigation buttons */}
             <button
               onClick={prevSlide}
@@ -364,6 +374,7 @@ const Home = () => {
             >
               <ChevronRight className="w-6 h-6" />
             </button>
+
 
 
             {/* Indicators */}
@@ -385,7 +396,8 @@ const Home = () => {
       </section>
 
 
-      {/* Services Section with 3D Cards */}
+
+      {/* Services Section - 2 Columns Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -398,56 +410,61 @@ const Home = () => {
           </div>
 
 
-          {/* Services grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          {/* Services Grid - 2 Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => {
               const Icon = service.icon
               return (
-                <div
+                <Link
                   key={service.id}
-                  className="group relative h-96 cursor-pointer"
-                  style={{
-                    transform: `perspective(1000px) rotateY(0deg)`,
-                    transition: 'transform 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = `perspective(1000px) rotateY(-5deg) rotateX(5deg)`
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = `perspective(1000px) rotateY(0deg)`
-                  }}
+                  to={service.path}
+                  className="group relative cursor-pointer"
                 >
-                  {/* Card background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-all duration-300`}></div>
+                  <div
+                    className="group relative h-80 cursor-pointer transform transition-all duration-300"
+                    style={{
+                      transform: `perspective(1000px) rotateY(0deg)`,
+                      transition: 'transform 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = `perspective(1000px) rotateY(-5deg) rotateX(5deg)`
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = `perspective(1000px) rotateY(0deg)`
+                    }}
+                  >
+                    {/* Card background */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-all duration-300`}></div>
 
-
-                  {/* Card content */}
-                  <div className="relative h-full bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-yellow-400 hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2">
-                    <div className="absolute -top-6 left-8 w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-8 h-8 text-gray-900" />
-                    </div>
-
-
-                    <div className="mt-12 h-full flex flex-col justify-between">
-                      <div>
-                        <h3 className="text-2xl font-black text-gray-900 mb-4">
-                          {service.title}
-                        </h3>
-                        <p className="text-gray-600 mb-6">
-                          {service.description}
-                        </p>
+                    {/* Card content */}
+                    <div className="relative h-full bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-yellow-400 hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 flex flex-col">
+                      <div className="absolute -top-6 left-6 w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-8 h-8 text-gray-900" />
                       </div>
-                      <div className="flex items-center text-yellow-500 font-bold group-hover:translate-x-2 transition-transform duration-300 mb-12">
-                        Learn more →
+
+                      <div className="mt-12 h-full flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-2xl font-black text-gray-900 mb-3">
+                            {service.title}
+                          </h3>
+                          <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                            {service.description}
+                          </p>
+                        </div>
+                        <div className="flex items-center text-yellow-500 font-bold group-hover:translate-x-2 transition-transform duration-300 text-sm">
+                          Learn more →
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               )
             })}
           </div>
         </div>
       </section>
+
 
 
       {/* Stats Section */}
@@ -458,7 +475,7 @@ const Home = () => {
               { count: startupsCount, suffix: "+", label: "Startups Helped" },
               { count: '1', suffix: "Cr+", prefix: "₹", label: "Total Raised" },
               { count: successCount, suffix: "%", label: "Success Rate" },
-              { count: MembersCount, suffix: "+", label: "Members Members" }
+              { count: MembersCount, suffix: "+", label: "Team Members" }
             ].map((stat, index) => (
               <div
                 key={index}
@@ -477,6 +494,7 @@ const Home = () => {
       </section>
 
 
+
       {/* About Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -489,6 +507,7 @@ const Home = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Founded with a vision to empower the next generation of entrepreneurs, IdeaNest has been at the forefront of startup innovation since 2018. We believe that every great business starts with a great idea, and our mission is to provide the tools, guidance, and support needed to turn those ideas into reality.
               </p>
+
 
 
               {/* Values */}
@@ -517,10 +536,12 @@ const Home = () => {
               </div>
 
 
+
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
                 Learn More About Us
               </button>
             </div>
+
 
 
             {/* Image */}
@@ -528,11 +549,12 @@ const Home = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
-                  alt="IdeaNest Members"
+                  alt="IdeaNest Team"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
+
 
 
               {/* Floating stats */}
@@ -543,10 +565,11 @@ const Home = () => {
                   </div>
                   <div>
                     <div className="text-2xl font-black text-gray-900">50+</div>
-                    <div className="text-sm text-gray-600">Expert Members</div>
+                    <div className="text-sm text-gray-600">Expert Team</div>
                   </div>
                 </div>
               </div>
+
 
 
               <div className="absolute -top-6 -right-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100">
@@ -566,6 +589,7 @@ const Home = () => {
       </section>
 
 
+
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
@@ -577,6 +601,7 @@ const Home = () => {
               Hear from the startups that have transformed their businesses with IdeaNest
             </p>
           </div>
+
 
           {/* Testimonials Slider */}
           <div className="relative max-w-4xl mx-auto">
@@ -595,11 +620,14 @@ const Home = () => {
                     ))}
                   </div>
 
+
                   <Quote className="w-12 h-12 text-yellow-400 mx-auto mb-6" />
+
 
                   <p className="text-gray-600 mb-8 leading-relaxed text-lg max-w-2xl mx-auto">
                     "{testimonial.text}"
                   </p>
+
 
                   <div className="flex items-center justify-center gap-4">
                     <img
@@ -616,6 +644,7 @@ const Home = () => {
               </div>
             ))}
 
+
             {/* Navigation buttons */}
             <button
               onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
@@ -629,6 +658,7 @@ const Home = () => {
             >
               <ChevronRight className="w-6 h-6" />
             </button>
+
 
             {/* Indicators */}
             <div className="flex justify-center gap-2 mt-8">
@@ -649,6 +679,7 @@ const Home = () => {
       </section>
 
 
+
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-50 to-orange-50">
         <div className="max-w-4xl mx-auto">
@@ -662,6 +693,7 @@ const Home = () => {
           </div>
 
 
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -672,6 +704,7 @@ const Home = () => {
             </div>
 
 
+
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-gray-900" />
@@ -679,6 +712,7 @@ const Home = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Strategic Planning</h3>
               <p className="text-gray-600">Develop a comprehensive roadmap for success</p>
             </div>
+
 
 
             <div className="text-center">
@@ -691,6 +725,7 @@ const Home = () => {
           </div>
 
 
+
           <div className="text-center">
             <button className="px-10 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105 mr-4">
               Schedule Consultation
@@ -701,6 +736,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
 
 
       {/* Add animation styles */}
@@ -718,14 +754,17 @@ const Home = () => {
         }
 
 
+
         .animate-blob {
           animation: blob 7s infinite;
         }
 
 
+
         .animation-delay-2000 {
           animation-delay: 2s;
         }
+
 
 
         .animation-delay-4000 {
@@ -735,6 +774,7 @@ const Home = () => {
     </div>
   )
 }
+
 
 
 export default Home
