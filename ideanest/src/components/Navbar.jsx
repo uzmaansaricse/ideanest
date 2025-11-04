@@ -25,9 +25,7 @@ const Navbar = () => {
               alt="IdeaNest Logo" 
               className="h-24 w-auto hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] transition-all duration-300"
             />
-            <span className="text-2xl font-bold text-yellow-500 tracking-wide hidden sm:inline">
-              IdeaNest
-            </span>
+          
           </div>
 
           {/* Hamburger Menu Icon */}
