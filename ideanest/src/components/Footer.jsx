@@ -218,11 +218,11 @@ const Footer = () => {
               by our team.
             </p>
             <div className="flex gap-6">
-              <a href="#privacy" className="hover:text-yellow-500 transition-colors font-medium">
-                Privacy Policy
+              <a href="/contact" className="hover:text-yellow-500 transition-colors font-medium">
+                Contact Us
               </a>
-              <a href="#terms" className="hover:text-yellow-500 transition-colors font-medium">
-                Terms of Service
+              <a href="/career" className="hover:text-yellow-500 transition-colors font-medium">
+                Careers
               </a>
               <a href="/return-policy" className="hover:text-yellow-500 transition-colors font-medium">
                 Return Policy

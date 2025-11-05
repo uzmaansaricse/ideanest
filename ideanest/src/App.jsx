@@ -11,12 +11,13 @@ import StartYourBusiness from './pages/StartBusiness'
 import DigitalMarketing from './pages/DigitalMarketting'
 import Funding from './pages/Funding'
 import Certificates from './pages/Certificates'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar/>
-
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
