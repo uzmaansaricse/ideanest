@@ -1,8 +1,10 @@
 import React from 'react'
 import { Mail, Phone, MapPin, Heart, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react'
 
+
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+
 
   const footerLinks = {
     company: [
@@ -23,10 +25,12 @@ const Footer = () => {
     ],
   }
 
+
   return (
     <footer className="bg-white text-gray-700 relative">
       {/* Top yellow gradient border */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 z-10" />
+
 
       <div className="bg-gradient-to-b from-white to-gray-50 pt-1">
         {/* Main Footer */}
@@ -45,6 +49,7 @@ const Footer = () => {
                 </p>
               </div>
 
+
               {/* Company Links */}
               <div>
                 <h4 className="text-lg font-bold text-gray-900 mb-4">Company</h4>
@@ -61,6 +66,7 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
+
 
               {/* Services Links */}
               <div>
@@ -80,20 +86,22 @@ const Footer = () => {
               </div>
             </div>
 
+
             {/* Right Column: Map & Contact */}
             <div className="space-y-8">
-              {/* Embedded Map */}
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+              {/* Embedded Map - Fixed with proper aspect ratio */}
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 w-full h-96">
                 <iframe
                   title="IdeaNest Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1442899835657!2d-122.40109768468215!3d37.79360297975659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0c4b9a7%3A0xa7ecfae6cf9f43d3!2sStartup%20Hub!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.5044547049756!2d77.3877339755002!3d28.614639475674544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM2JzUyLjciTiA3N8KwMjMnMjUuMSJF!5e0!3m2!1sen!2sin!4v1762326532162!5m2!1sen!2sin"
                   width="100%"
-                  height="300"
-                  style={{ border: 0 }}
+                  height="100%"
+                  style={{ border: 0, display: 'block' }}
                   allowFullScreen=""
                   loading="lazy"
                 ></iframe>
               </div>
+
 
               {/* Contact Information & Social */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -102,63 +110,89 @@ const Footer = () => {
                   <h4 className="text-lg font-bold text-gray-900 mb-4">Get In Touch</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Phone className="w-4 h-4 text-gray-900" />
                       </div>
                       <div>
-                        <a href="tel:+1234567890" className="text-gray-900 font-semibold hover:text-yellow-500 transition-colors text-sm">
-                          +1 (234) 567-890
+                        <a href="tel:+91 9910291753" className="text-gray-900 font-semibold hover:text-yellow-500 transition-colors text-sm">
+                         +91 99102 91753
                         </a>
                       </div>
                     </div>
+
+
+                     <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-4 h-4 text-gray-900" />
+                      </div>
+                      <div>
+                        <a href="tel:+91 96709 14961" className="text-gray-900 font-semibold hover:text-yellow-500 transition-colors text-sm">
+                        +91 96709 14961
+                        </a>
+                      </div>
+                    </div>
+
+
+                     <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-4 h-4 text-gray-900" />
+                      </div>
+                      <div>
+                        <a href="tel: +91 80921 05492" className="text-gray-900 font-semibold hover:text-yellow-500 transition-colors text-sm">
+                         +91 80921 05492
+                        </a>
+                      </div>
+                    </div>
+
+
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Mail className="w-4 h-4 text-gray-900" />
                       </div>
                       <div>
-                        <a href="mailto:info@ideanest.com" className="text-gray-900 font-semibold hover:text-yellow-500 transition-colors text-sm">
-                          info@ideanest.com
+                        <a href="mailto:Ideanestglobalventure@gmail.com" className="text-gray-900 font-semibold hover:text-yellow-500 transition-colors text-sm">
+                         Ideanestglobalventure@gmail.com
                         </a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center mt-1">
+                      <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
                         <MapPin className="w-4 h-4 text-gray-900" />
                       </div>
                       <div>
                         <p className="text-gray-900 font-semibold text-sm">
-                          123 Startup Avenue<br />
-                          Tech City, TC 12345
+                          B128 B block <br /> 2nd floor  <br /> noida sector 63 <br /> 201031
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
+
                 {/* Social Media Links */}
                 <div>
                   <h4 className="text-lg font-bold text-gray-900 mb-4">Follow Us</h4>
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 flex-wrap">
                     <a
-                      href="https://linkedin.com/company/ideanest"
+                      href="https://www.linkedin.com/company/ideanest-global-ventures/jobs/"
                       className="w-10 h-10 bg-gray-100 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50 group"
                     >
                       <Linkedin className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" />
                     </a>
                     <a
-                      href="https://twitter.com/ideanest"
+                      href="https://twitter.com"
                       className="w-10 h-10 bg-gray-100 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50 group"
                     >
                       <Twitter className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" />
                     </a>
                     <a
-                      href="https://facebook.com/ideanest"
+                      href="https://www.facebook.com"
                       className="w-10 h-10 bg-gray-100 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50 group"
                     >
                       <Facebook className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" />
                     </a>
                     <a
-                      href="https://instagram.com/ideanest"
+                      href="https://www.instagram.com/ideanest_global?igsh=MWdleHJxc2d6MndrYw=="
                       className="w-10 h-10 bg-gray-100 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50 group"
                     >
                       <Instagram className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" />
@@ -169,8 +203,10 @@ const Footer = () => {
             </div>
           </div>
 
+
           {/* Divider */}
           <div className="h-px bg-gradient-to-r from-transparent via-yellow-300 to-transparent my-8"></div>
+
 
           {/* Bottom */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
@@ -197,5 +233,6 @@ const Footer = () => {
     </footer>
   )
 }
+
 
 export default Footer

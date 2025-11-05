@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { ArrowRight, Code, Globe, Smartphone, Zap, Users, Target, CheckCircle } from 'lucide-react'
+import { useNavigate } from 'react-router-dom';
 
 const WebDevelopment = () => {
   const [activeTab, setActiveTab] = useState(0)
+
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -98,10 +101,10 @@ const WebDevelopment = () => {
             Crafting stunning, scalable, and high-performing websites that drive your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+            <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
-            <button className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
+            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
               Learn More
             </button>
           </div>
@@ -183,7 +186,7 @@ const WebDevelopment = () => {
                   <p className="text-gray-700 mb-8 leading-relaxed text-justify">
                     {services[activeTab].thirdDescription}
                   </p>
-                  <button className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 inline-flex items-center gap-2">
+                  <button onClick={()=>navigate('/contact')} className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 inline-flex items-center gap-2">
                     Get Started <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -270,10 +273,10 @@ const WebDevelopment = () => {
             Let's collaborate to create something amazing that drives results for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+            <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation
             </button>
-            <button className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
+            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
               View Portfolio
             </button>
           </div>
