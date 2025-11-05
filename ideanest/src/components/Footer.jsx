@@ -6,10 +6,11 @@ const Footer = () => {
 
   const footerLinks = {
     company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'Our Services', href: '#services' },
-      { name: 'Blog', href: '#blog' },
-      { name: 'Careers', href: '#careers' },
+      { name: 'Home', href: '/' },
+      { name: 'Services', href: '/web-development' },
+      { name: 'Career', href: '/career' },
+      { name: 'Refund Policy', href: '/refund-policy' },
+      { name: 'Contact', href: '/contact' },
     ],
     services: [
       { name: 'Startup India Certificate', href: '#startup' },
