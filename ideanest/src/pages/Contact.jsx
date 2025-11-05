@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,6 +14,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
+
   const handleInputChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -21,12 +23,15 @@ const Contact = () => {
     }))
   }
 
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
 
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
+
 
     setIsSubmitting(false)
     setIsSubmitted(true)
@@ -39,8 +44,10 @@ const Contact = () => {
       message: ''
     })
 
+
     setTimeout(() => setIsSubmitted(false), 5000)
   }
+
 
   const services = [
     'Startup India Certificate',
@@ -54,23 +61,24 @@ const Contact = () => {
     'General Consultation'
   ]
 
+
   const contactInfo = [
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+1 (234) 567-8900', '+1 (234) 567-8901'],
-      description: 'Mon-Fri 9AM-6PM EST'
+      details: ['+91 99102 91753', '+91 96709 14961', '+91 80921 05492'],
+      description: 'Mon-Fri 9AM-6PM IST'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@ideanest.com', 'support@ideanest.com'],
+      details: ['Ideanestglobalventure@gmail.com'],
       description: 'We respond within 24 hours'
     },
     {
       icon: MapPin,
       title: 'Office',
-      details: ['123 Startup Avenue', 'Tech City, TC 12345, USA'],
+      details: ['B128 B block', '2nd floor', 'Noida Sector 63', '201031'],
       description: 'Visit us for consultations'
     },
     {
@@ -81,8 +89,10 @@ const Contact = () => {
     }
   ]
 
+
   return (
     <div className="bg-white">
+
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 via-white to-orange-50">
@@ -90,6 +100,7 @@ const Contact = () => {
           <div className="absolute top-20 -left-40 w-80 h-80 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
           <div className="absolute top-40 -right-40 w-80 h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
         </div>
+
 
         <div className="relative max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
@@ -115,6 +126,7 @@ const Contact = () => {
         </div>
       </section>
 
+
       {/* Contact Form & Info Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -126,6 +138,7 @@ const Contact = () => {
               <p className="text-gray-600 mb-8">
                 Fill out the form below and we'll get back to you within 24 hours with a personalized response.
               </p>
+
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -161,6 +174,7 @@ const Contact = () => {
                   </div>
                 </div>
 
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -187,10 +201,11 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-yellow-400 transition-colors"
-                      placeholder="+1 (234) 567-8900"
+                      placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
                 </div>
+
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -210,6 +225,7 @@ const Contact = () => {
                   </select>
                 </div>
 
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
                     Message *
@@ -225,6 +241,7 @@ const Contact = () => {
                     placeholder="Tell us about your startup and how we can help..."
                   />
                 </div>
+
 
                 <button
                   type="submit"
@@ -245,6 +262,7 @@ const Contact = () => {
                 </button>
               </form>
 
+
               {isSubmitted && (
                 <div className="mt-6 bg-green-50 border-l-4 border-green-500 p-4 rounded-lg">
                   <div className="flex items-center gap-3">
@@ -258,6 +276,7 @@ const Contact = () => {
               )}
             </div>
 
+
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
@@ -266,6 +285,7 @@ const Contact = () => {
                   Multiple ways to reach us. Choose the method that works best for you.
                 </p>
               </div>
+
 
               <div className="space-y-6">
                 {contactInfo.map((info, index) => {
@@ -278,7 +298,7 @@ const Contact = () => {
                       <div>
                         <h3 className="text-lg font-bold text-gray-900 mb-1">{info.title}</h3>
                         {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-gray-700 font-medium">{detail}</p>
+                          <p key={idx} className="text-gray-700 font-medium text-sm">{detail}</p>
                         ))}
                         <p className="text-gray-600 text-sm mt-1">{info.description}</p>
                       </div>
@@ -290,6 +310,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
 
       {/* Animations */}
       <style jsx>{`
@@ -305,9 +326,11 @@ const Contact = () => {
           }
         }
 
+
         .animate-blob {
           animation: blob 7s infinite;
         }
+
 
         .animation-delay-2000 {
           animation-delay: 2s;
@@ -316,5 +339,6 @@ const Contact = () => {
     </div>
   )
 }
+
 
 export default Contact

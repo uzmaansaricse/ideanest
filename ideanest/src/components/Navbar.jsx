@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const services = [
     {
-      name: "Web Development",
+      name: "Web/App Development",
       path: "/web-development"
     },
     {

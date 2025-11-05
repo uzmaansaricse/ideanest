@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { Briefcase, MapPin, Clock, DollarSign, Users, Target, Heart, Zap, Award, CheckCircle } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const Career = () => {
   const [selectedJob, setSelectedJob] = useState(null)
+
+  const navigate = useNavigate()
 
   const jobs = [
     {
@@ -151,7 +154,7 @@ const Career = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
          
-            <button className="px-8 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg hover:bg-yellow-50 transition-all duration-300">
+            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg hover:bg-yellow-50 transition-all duration-300">
               Learn About Us
             </button>
           </div>
@@ -183,10 +186,10 @@ const Career = () => {
                   Choosing IdeaNest means opting for a comprehensive and tailored business support partner. Our seasoned professionals bring expertise across business registration, funding solutions, website development, certifications, and digital marketing. With a client-centric approach, we prioritize your unique needs, offering streamlined processes to simplify the complexities of entrepreneurship. Trust IdeaNest for a holistic, personalized, and efficient journey toward business success.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+                  <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
                     Get Started Today
                   </button>
-                  <button className="px-8 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg hover:bg-yellow-50 transition-all duration-300">
+                  <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg hover:bg-yellow-50 transition-all duration-300">
                     Learn More
                   </button>
                 </div>

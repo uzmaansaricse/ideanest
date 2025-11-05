@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Zap, TrendingUp, Users, Code, Lightbulb, Target, Award, FileText, Shield, PenTool, DollarSign, Monitor, Megaphone, Star, Quote, CheckCircle, ArrowRight, Globe, Briefcase } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import herovideo from '../assets/hero.mp4'
 import ClutchBadges from '../components/Clutchbadges'
 
@@ -15,7 +15,7 @@ const Home = () => {
   const [successCount, setSuccessCount] = useState(0)
   const [MembersCount, setMembersCount] = useState(0)
 
-
+  const navigate = useNavigate()
 
   // Slider data
   const slides = [
@@ -267,10 +267,10 @@ const Home = () => {
               IdeaNest provides comprehensive business enhancement services designed specifically for ambitious startups looking to scale and succeed in today's competitive market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+              <button onClick={()=>navigate('/contact')}  className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="px-8 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg bg-gray-900 transition-all duration-300">
+              <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg bg-gray-900 transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -350,7 +350,7 @@ const Home = () => {
                       <p className="text-lg text-gray-600 mb-6">
                         {slide.description}
                       </p>
-                      <button className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300">
+                      <button onClick={()=>navigate('/contact')} className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300">
                         Explore Now
                       </button>
                     </div>
@@ -537,7 +537,7 @@ const Home = () => {
 
 
 
-              <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+              <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
                 Learn More About Us
               </button>
             </div>
@@ -727,10 +727,10 @@ const Home = () => {
 
 
           <div className="text-center">
-            <button className="px-10 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105 mr-4">
+            <button onClick={()=>navigate('/contact')} className="px-10 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105 mr-4">
               Schedule Consultation
             </button>
-            <button className="px-10 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg hover:bg-yellow-50 transition-all duration-300">
+            <button onClick={()=>navigate('/contact')} className="px-10 py-4 border-2 border-yellow-400 text-yellow-500 font-bold rounded-lg hover:bg-yellow-50 transition-all duration-300">
               View Our Services
             </button>
           </div>

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { X, ChevronLeft, ChevronRight, FileText, CheckCircle } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
+
+  const navigate = useNavigate()
 
   const certificates = [
     {
@@ -321,10 +324,10 @@ const Certificates = () => {
             Our expert team will guide you through every step of the certification and registration process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+            <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
-            <button className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
+            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
               Contact Us
             </button>
           </div>
