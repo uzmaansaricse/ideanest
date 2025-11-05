@@ -180,7 +180,7 @@ const Footer = () => {
                     >
                       <Linkedin className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" />
                     </a>
-                    <a
+                    {/* <a
                       href="https://twitter.com"
                       className="w-10 h-10 bg-gray-100 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50 group"
                     >
@@ -191,7 +191,7 @@ const Footer = () => {
                       className="w-10 h-10 bg-gray-100 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50 group"
                     >
                       <Facebook className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" />
-                    </a>
+                    </a> */}
                     <a
                       href="https://www.instagram.com/ideanest_global?igsh=MWdleHJxc2d6MndrYw=="
                       className="w-10 h-10 bg-gray-100 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50 group"

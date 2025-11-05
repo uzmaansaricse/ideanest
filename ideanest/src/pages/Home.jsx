@@ -22,21 +22,16 @@ const Home = () => {
     {
       title: "Transform Your Startup Vision",
       description: "We help early-stage startups turn ideas into reality with expert guidance and strategic enhancement",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+      image: "https://media.assettype.com/outlookbusiness/import/outlookmoney/public/uploads/article/gallery/f79cf41dff86b52bbc15d8bb7f7b8879.jpg?w=801&auto=format%2Ccompress&fit=max&format=webp&dpr=1.0",
       icon: Lightbulb
     },
     {
       title: "Accelerate Business Growth",
       description: "Scale your startup with data-driven strategies and proven business methodologies",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+      image: "https://media.istockphoto.com/id/1463681745/photo/businessman-use-electronic-pen-writing-rising-colorful-graph-from-2023-to-2024-year-of.jpg?s=612x612&w=0&k=20&c=BU2KPpvgTAEXnJWL0jKOJ-uRx1LK2h_6XJBlNOkiy_k=",
       icon: TrendingUp
     },
-    {
-      title: "Build Exceptional Teams",
-      description: "Connect with talented professionals and build a team that drives innovation",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
-      icon: Users
-    }
+    
   ]
 
 
@@ -578,7 +573,7 @@ const Home = () => {
                     <Award className="w-6 h-6 text-gray-900" />
                   </div>
                   <div>
-                    <div className="text-2xl font-black text-gray-900">95%</div>
+                    <div className="text-2xl font-black text-gray-900">85%</div>
                     <div className="text-sm text-gray-600">Success Rate</div>
                   </div>
                 </div>
@@ -630,11 +625,11 @@ const Home = () => {
 
 
                   <div className="flex items-center justify-center gap-4">
-                    <img
+                    {/* <img
                       src={testimonial.image}
                       alt={testimonial.name}
                       className="w-16 h-16 rounded-full object-cover"
-                    />
+                    /> */}
                     <div>
                       <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
                       <div className="text-sm text-gray-600">{testimonial.company}</div>
