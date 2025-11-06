@@ -215,7 +215,7 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed z-50 bottom-8 right-8 flex items-center justify-center  hover:bg-green-600 rounded-full w-14 h-14 shadow-lg transition-transform hover:scale-110"
+        className="fixed z-50 bottom-8 right-8 flex items-center justify-center  bg-green-400 rounded-full w-14 h-14 shadow-lg transition-transform hover:scale-110"
         style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }}
       >
         <WhatsappSVG />
