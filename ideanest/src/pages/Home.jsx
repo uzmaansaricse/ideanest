@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Zap, TrendingUp, Users, Code, Lightbulb, Target, Award, FileText, Shield, PenTool, DollarSign, Monitor, Megaphone, Star, Quote, CheckCircle, ArrowRight, Globe, Briefcase } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import herovideo from '../assets/hero.mp4'
+import roshankumar from '../assets/roshankumar.png'
+import bringup from '../assets/bringup.png'
+import amanjha from '../assets/amanjha.png'
 import ClutchBadges from '../components/Clutchbadges'
 
 
@@ -106,22 +109,22 @@ const Home = () => {
   const testimonials = [
     {
       name: "ROSHAN KUMAR",
-      company: "Startup Founder",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      company: "i.Chem",
+      image: roshankumar,
       rating: 5,
       text: "Best services, affordable prices and amazing team to support start ups for best digital solutions."
     },
     {
       name: "AAYUSH PANDEY",
       company: "Startup Founder",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      image: bringup,
       rating: 5,
       text: "I'm really impressed by the professionalism and quality of products delivered. I would highly recommend upcoming startups to opt for their services."
     },
     {
-      name: "Client",
-      company: "Startup Founder",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      name: "AMAN JHA",
+      company: "Jha Motors",
+      image: amanjha,
       rating: 5,
       text: "I highly recommend IDEANEST to anyone looking for topnotch service and a memorable experience."
     }
@@ -625,11 +628,11 @@ const Home = () => {
 
 
                   <div className="flex items-center justify-center gap-4">
-                    {/* <img
+                    <img
                       src={testimonial.image}
                       alt={testimonial.name}
                       className="w-16 h-16 rounded-full object-cover"
-                    /> */}
+                    />
                     <div>
                       <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
                       <div className="text-sm text-gray-600">{testimonial.company}</div>

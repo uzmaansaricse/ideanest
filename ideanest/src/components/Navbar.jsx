@@ -199,6 +199,36 @@ const Navbar = () => {
               )}
             </li>
 
+             <li>
+              <Link
+                to="/about"
+                onClick={closeMenu}
+                className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
+              >
+                About
+              </Link>
+            </li>
+
+               <li>
+              <Link
+                to="/project"
+                onClick={closeMenu}
+                className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
+              >
+                Projects
+              </Link>
+            </li>
+
+             <li>
+              <Link
+                to="/blog"
+                onClick={closeMenu}
+                className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
+              >
+                Blog
+              </Link>
+            </li>
+
             <li>
               <Link
                 to="/career"
