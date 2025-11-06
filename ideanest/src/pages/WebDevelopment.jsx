@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { ArrowRight, Code, Globe, Smartphone, Zap, Users, Target, CheckCircle } from 'lucide-react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+
 
 const WebDevelopment = () => {
   const [activeTab, setActiveTab] = useState(0)
-
   const navigate = useNavigate();
 
   const services = [
@@ -21,7 +21,7 @@ const WebDevelopment = () => {
       id: 2,
       title: "Application Development",
       color: "from-amber-500 to-amber-600",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=500&fit=crop",
+      image: "https://www.rishabhsoft.com/wp-content/uploads/2018/07/Android-App-Development-Process-1.jpg",
       mainDescription: "Embark on a transformative journey with Ideanest and elevate your business through our cutting-edge Application Development services. Our team of skilled professionals harnesses the latest technologies to craft bespoke applications tailored to meet your unique business requirements. Whether you're aiming to enhance user experiences, streamline operations, or expand your digital footprint, Ideanest is your dedicated partner in turning visions into reality.",
       secondDescription: "We prioritize innovation and efficiency, ensuring that each application we develop is not just functional but also aligns seamlessly with your business objectives. From concept to deployment, our robust development process guarantees a smooth and timely delivery, empowering your business with the digital tools it needs to thrive in today's dynamic landscape.",
       thirdDescription: "Choose Ideanest for Application Development that goes beyond expectations, propelling your business to new heights in the ever-evolving digital realm."
@@ -30,7 +30,7 @@ const WebDevelopment = () => {
       id: 3,
       title: "Shopify/E-Commerce Website Development",
       color: "from-orange-500 to-orange-600",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=500&fit=crop",
+      image: "https://raoinformationtechnology.com/wp-content/uploads/2021/03/E-commerce-company.jpg",
       mainDescription: "At Ideanest, Our expert team specializes in crafting seamless and user-friendly online platforms that amplify your brand's digital presence. Whether you're launching a new e-commerce venture or seeking to revamp your existing Shopify store, we offer bespoke solutions tailored to your unique needs.",
       secondDescription: "We understand the dynamic landscape of online retail and prioritize creating visually appealing, responsive, and feature-rich websites. From user-friendly navigation to secure payment gateways, we ensure a top-notch shopping experience for your customers. With a keen eye on design trends and e-commerce best practices, we empower businesses to thrive in the competitive online marketplace.",
       thirdDescription: "Choose Ideanest for Shopify/E-commerce Website Development, and embark on a journey of digital success for your brand."
@@ -39,7 +39,7 @@ const WebDevelopment = () => {
       id: 4,
       title: "WordPress Website Development",
       color: "from-green-500 to-green-600",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=500&fit=crop",
+      image: "https://www.digitalsilk.com/wp-content/uploads/2024/05/Digital-Silk-Blog-hero-image-1200x675-V2-36.jpg",
       mainDescription: "At Ideanest, we understand the significance of a compelling online presence in today's competitive landscape. Our WordPress Website Development services ensure a seamless blend of creativity and functionality, providing a user experience that captivates and converts. Whether you're establishing a new website or revamping an existing one, our experts at Ideanest are committed to delivering a visually stunning and highly functional WordPress website that reflects the essence of your brand.",
       secondDescription: "Ignite your online journey with Ideanest and unlock the full potential of your digital presence. Elevate your online presence with WordPress Website Development services from Ideanest. We specialize in crafting dynamic and user-friendly websites that empower your brand on the digital frontier.",
       thirdDescription: "Our team of skilled developers leverages the flexibility and robust features of WordPress to deliver tailor-made solutions that align with your business objectives."
@@ -48,7 +48,7 @@ const WebDevelopment = () => {
       id: 5,
       title: "Domain And Website Hosting",
       color: "from-red-500 to-red-600",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=500&fit=crop",
+      image: "https://techterms.com/img/xl/web_host_366.png",
       mainDescription: "With Ideanest, you get more than just a hosting service; you gain a partner committed to your online success. Our robust infrastructure ensures 24/7 accessibility, minimal downtime, and lightning-fast loading speeds. Whether you're a startup or an established business, our hosting solutions scale to meet your evolving needs.",
       secondDescription: "Benefit from our user-friendly interface, efficient customer support, and competitive pricing. Make your mark in the digital landscape with Ideanest– where your domain and website hosting needs are not just met but exceeded. Elevate your online presence with Ideanest top-notch Domain and Website Hosting services.",
       thirdDescription: "Our comprehensive offerings ensure a seamless and secure digital journey for your business. Choose from a variety of domain options that align with your brand identity, and enjoy reliable website hosting that guarantees optimal performance."
@@ -57,7 +57,7 @@ const WebDevelopment = () => {
       id: 6,
       title: "CMS based Website",
       color: "from-purple-500 to-purple-600",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=500&fit=crop",
+      image: "https://f1.madcapsoftware.com/blogImages/2023/IXIASOFT%20Blogs/ill-six-different-types-content-management-systems-1200x1200.png?w=1800",
       mainDescription: "At Ideanest, we recognize the significance of a robust online presence in today's digital landscape. Our CMS solutions provide you with the flexibility to control and update your website content without technical expertise, streamlining your digital operations. Whether you're a startup or an established business, our CMS-based websites offer scalability and efficiency, enabling you to stay ahead in the competitive online realm.",
       secondDescription: "Embrace the future of web management with Ideanest and unlock the full potential of your online presence. Elevate your online presence with Ideanest CMS-based website solutions. Our Content Management System (CMS) services empower businesses to effortlessly manage and update their web content, ensuring a dynamic and engaging online platform.",
       thirdDescription: "With user-friendly interfaces and customizable features, our CMS-based websites are designed to suit the unique needs of your business."
@@ -71,20 +71,28 @@ const WebDevelopment = () => {
     { icon: CheckCircle, title: "Quality Assured", description: "Thoroughly tested solutions" }
   ]
 
+
   return (
     <div className="bg-white">
-      {/* Hero Section with Background Image */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(17, 24, 39, 0.85) 0%, rgba(30, 41, 59, 0.85) 100%), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1500&h=800&fit=crop')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        {/* Video Background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=800&fit=crop"
+        >
+          <source src="https://v.ftcdn.net/00/48/31/12/700_F_48311251_QBFZ12uyt4op5MORsYTYiTxn6AXu1ZhI_ST.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-gray-900/70" />
+
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
         </div>
@@ -101,10 +109,10 @@ const WebDevelopment = () => {
             Crafting stunning, scalable, and high-performing websites that drive your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+            <button onClick={() => navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
-            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
+            <button onClick={() => navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
               Learn More
             </button>
           </div>
@@ -186,7 +194,7 @@ const WebDevelopment = () => {
                   <p className="text-gray-700 mb-8 leading-relaxed text-justify">
                     {services[activeTab].thirdDescription}
                   </p>
-                  <button onClick={()=>navigate('/contact')} className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 inline-flex items-center gap-2">
+                  <button onClick={() => navigate('/contact')} className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 inline-flex items-center gap-2">
                     Get Started <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -273,10 +281,10 @@ const WebDevelopment = () => {
             Let's collaborate to create something amazing that drives results for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+            <button onClick={() => navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation
             </button>
-            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
+            <button onClick={() => navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
               View Portfolio
             </button>
           </div>

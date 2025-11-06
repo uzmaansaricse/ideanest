@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b-4 border-yellow-400 shadow-lg shadow-yellow-400/30">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
           {/* Logo Section */}
@@ -49,7 +49,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="IdeaNest Logo" 
-              className="h-24 w-auto hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] transition-all duration-300"
+              className="h-24 w-auto hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] transition-all duration-300 "
             />
           </div>
 
@@ -99,6 +99,33 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
+            </li>
+
+            <li className="relative group">
+              <Link
+                to="/about"
+                className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
+              >
+                About
+              </Link>
+            </li>
+
+            <li className="relative group">
+              <Link
+                to="/blog"
+                className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
+              >
+                Blog
+              </Link>
+            </li>
+
+            <li className="relative group">
+              <Link
+                to="/project"
+                className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
+              >
+                Projects
+              </Link>
             </li>
 
             <li className="relative group">

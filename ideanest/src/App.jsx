@@ -12,6 +12,9 @@ import DigitalMarketing from './pages/DigitalMarketting'
 import Funding from './pages/Funding'
 import Certificates from './pages/Certificates'
 import ScrollToTop from './components/ScrollToTop'
+import About from './pages/About'
+import Blog from './pages/Blog'
+import Projects from './pages/Projects'
 
 const App = () => {
   return (
@@ -28,6 +31,10 @@ const App = () => {
         <Route path="/digital-marketing" element={<DigitalMarketing/>} />
         <Route path="/funding" element={<Funding/>} />
         <Route path="/certificates" element={<Certificates/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/blog" element={<Blog/>} />
+        <Route path="/project" element={<Projects/>} />
+        <Route path="/*" element={<Home/>} />
       </Routes>
 
       <Footer/>
