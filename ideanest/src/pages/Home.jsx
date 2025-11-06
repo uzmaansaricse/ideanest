@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Zap, TrendingUp, Users, Code, Lightbulb, Target, Award, FileText, Shield, PenTool, DollarSign, Monitor, Megaphone, Star, Quote, CheckCircle, ArrowRight, Globe, Briefcase } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
-import herovideo from '../assets/hero.mp4'
+
 import roshankumar from '../assets/roshankumar.png'
 import bringup from '../assets/bringup.png'
 import amanjha from '../assets/amanjha.png'
@@ -220,12 +220,11 @@ const Home = () => {
         {/* Video Background */}
         <video
           className="absolute inset-0 w-full h-full object-cover z-0"
-          src={herovideo}
+          src='https://www.pexels.com/download/video/3252780/'
           autoPlay
           muted
           loop
           playsInline
-          poster="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
           style={{opacity: 0.35}}
         ></video>
 

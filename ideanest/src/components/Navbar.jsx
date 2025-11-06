@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b-4 border-yellow-400 shadow-lg shadow-yellow-400/30">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
           {/* Logo Section */}
@@ -74,6 +74,15 @@ const Navbar = () => {
               </Link>
             </li>
 
+            <li className="relative group">
+              <Link
+                to="/about"
+                className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
+              >
+                About
+              </Link>
+            </li>
+
             {/* Services Dropdown */}
             <li 
               className="relative group"
@@ -101,12 +110,12 @@ const Navbar = () => {
               </div>
             </li>
 
-            <li className="relative group">
+             <li className="relative group">
               <Link
-                to="/about"
+                to="/project"
                 className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
               >
-                About
+                Projects
               </Link>
             </li>
 
@@ -119,14 +128,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="relative group">
-              <Link
-                to="/project"
-                className="text-gray-800 text-lg font-semibold hover:text-yellow-500 transition-colors duration-300 pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-gradient-to-r after:from-yellow-400 after:to-yellow-500 after:transition-all after:duration-300 group-hover:after:w-full"
-              >
-                Projects
-              </Link>
-            </li>
+           
 
             <li className="relative group">
               <Link
@@ -172,6 +174,16 @@ const Navbar = () => {
               </Link>
             </li>
 
+             <li>
+              <Link
+                to="/about"
+                onClick={closeMenu}
+                className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
+              >
+                About
+              </Link>
+            </li>
+
             {/* Mobile Services Dropdown */}
             <li className="w-full border-b border-yellow-200">
               <button
@@ -199,15 +211,7 @@ const Navbar = () => {
               )}
             </li>
 
-             <li>
-              <Link
-                to="/about"
-                onClick={closeMenu}
-                className="block w-full px-6 py-4 text-gray-800 hover:bg-yellow-100 hover:border-l-4 hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 text-base font-semibold"
-              >
-                About
-              </Link>
-            </li>
+            
 
                <li>
               <Link

@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 
 const DigitalMarketing = () => {
   const [activeTab, setActiveTab] = useState(0)
-
   const navigate = useNavigate()
 
   const services = [
@@ -12,7 +11,7 @@ const DigitalMarketing = () => {
       id: 1,
       title: "Digital Marketing",
       color: "from-blue-500 to-blue-600",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
+      image: "https://yittbox.com/BlogImages/Importance-of-Digital-Marketing.jpg",
       mainDescription: "At Ideanest, we understand the dynamic nature of the digital realm and tailor our solutions to amplify your brand's visibility and engagement. From optimizing your website for search engines to creating compelling social media strategies, we employ the latest techniques to drive targeted traffic and enhance your online reach. Our experienced team of digital marketers is dedicated to delivering measurable results, ensuring a strong return on investment.",
       secondDescription: "Supercharge your online presence with Ideanest cutting-edge Digital Marketing Services. We specialize in crafting strategic digital campaigns that propel your business to the forefront of the digital landscape. Our comprehensive services encompass social media marketing, search engine optimization (SEO), content marketing, and more.",
       thirdDescription: "Ignite your brand's digital journey with Ideanest and let our Digital Marketing Services propel your business to new heights in the ever-evolving online marketplace."
@@ -21,7 +20,7 @@ const DigitalMarketing = () => {
       id: 2,
       title: "Search Engine Optimization",
       color: "from-green-500 to-green-600",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
+      image: "https://alreadysetup.com/wp-content/uploads/SEO-image1.jpg",
       mainDescription: "Supercharge your online visibility with Ideanest Search Engine Optimization (SEO) services. Our dedicated team of experts employs cutting-edge strategies to propel your website to the top ranks of search engine results. By optimizing key elements such as keywords, meta tags, and content, we ensure that your business stands out in the digital landscape.",
       secondDescription: "At Ideanest, we understand the critical role SEO plays in driving organic traffic and enhancing your online presence. Our comprehensive SEO services cater to businesses of all sizes, delivering tailored solutions to boost your website's performance. From on-page optimization to link building and analytics, we optimize every aspect to maximize your online impact.",
       thirdDescription: "Partner with Ideanest and let our SEO services transform your online presence, attracting the right audience and driving sustainable growth for your business. Stay ahead in the digital game with Ideanest powerful SEO strategies."
@@ -30,7 +29,7 @@ const DigitalMarketing = () => {
       id: 3,
       title: "Social Media Management",
       color: "from-purple-500 to-purple-600",
-      image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=500&fit=crop",
+      image: "https://azbigmedia.com/wp-content/uploads/2021/05/social-media-management-software.jpeg",
       mainDescription: "Ideanest takes the reins of your social media strategy, from content creation and scheduling to engagement and analytics. We tailor our approach to align with your brand identity and business goals, ensuring a cohesive and effective online presence. With dynamic and engaging content, we captivate your audience, foster community growth, and enhance brand loyalty.",
       secondDescription: "Our Social Media Management service isn't just about posting; it's a strategic collaboration to optimize your brand's digital footprint. Let Ideanest amplify your social media impact, driving growth, and fostering meaningful connections with your audience. We handle all aspects of your social presence to ensure maximum engagement and reach.",
       thirdDescription: "Stay ahead in the digital realm with our comprehensive and results-driven Social Media Management service. From content strategy to community management, we've got your brand covered."
@@ -39,7 +38,7 @@ const DigitalMarketing = () => {
       id: 4,
       title: "PPC Marketing",
       color: "from-red-500 to-red-600",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
+      image: "https://localo.com/assets/img/definitions/what-is-ppc.webp",
       mainDescription: "Supercharge your digital visibility with Ideanest expert PPC Marketing services. Our Pay-Per-Click solutions are tailored to elevate your online presence, driving targeted traffic and maximizing your ROI. With a strategic approach to keyword research, ad creation, and campaign management, Ideanest ensures your brand stands out in the competitive digital landscape.",
       secondDescription: "Our PPC specialists craft compelling ad campaigns across platforms like Google Ads and social media, precisely targeting your audience and generating measurable results. Whether you're a startup looking for an initial boost or an established business aiming for enhanced online visibility, Ideanest delivers data-driven PPC strategies that align with your goals.",
       thirdDescription: "Stay ahead of the curve and amplify your online impact with Ideanest PPC Marketing services—where every click counts towards your business success."
@@ -48,7 +47,7 @@ const DigitalMarketing = () => {
       id: 5,
       title: "Content Writing",
       color: "from-amber-500 to-amber-600",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
+      image: "https://ebizfiling.com/wp-content/uploads/2022/05/content-writing-2.png",
       mainDescription: "Revitalize your brand's narrative with Ideanest exceptional content writing services. Our team of seasoned writers crafts compelling and tailored content that captivates your audience, elevates your brand identity, and drives meaningful engagement. Whether you need website content, blog posts, social media updates, or marketing collateral, Ideanest ensures that each word contributes to your brand's success.",
       secondDescription: "At Ideanest, we understand the power of storytelling in the digital age. Our content writing services go beyond mere words; we create narratives that resonate with your target audience, establish credibility, and enhance your online visibility. With a keen eye for detail and a commitment to excellence, Ideanest is your partner in delivering content that not only communicates but leaves a lasting impression.",
       thirdDescription: "Transform your brand's story with Ideanest content writing services and stand out in the crowded digital landscape."
@@ -57,7 +56,7 @@ const DigitalMarketing = () => {
       id: 6,
       title: "Social Media Advertising",
       color: "from-pink-500 to-pink-600",
-      image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=500&fit=crop",
+      image: "https://www.threegirlsmedia.com/wp-content/uploads/2021/12/social-media-advertising-scaled.jpg",
       mainDescription: "Ignite your brand's presence with Ideanest Social Media Advertising services. We specialize in crafting impactful social media campaigns tailored to amplify your business reach and engagement. Our expert team harnesses the power of platforms like Facebook, Instagram, Twitter, and LinkedIn to strategically target your audience and drive conversions.",
       secondDescription: "Ideanest goes beyond mere visibility – we create compelling ad content, optimize ad spend, and monitor campaign performance to ensure maximum ROI. Whether you're launching a new product, building brand awareness, or driving website traffic, our Social Media Advertising services are designed to elevate your digital marketing game.",
       thirdDescription: "Stay ahead in the dynamic world of social media with Ideanest as your partner. From innovative ad creatives to data-driven strategies, we've got your brand covered. Let us navigate the social landscape for you, turning clicks into customers and followers into brand advocates. Ignite your social media success with Ideanest!"
@@ -66,7 +65,7 @@ const DigitalMarketing = () => {
       id: 7,
       title: "Email Marketing",
       color: "from-indigo-500 to-indigo-600",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=500&fit=crop",
+      image: "https://www.outboundengine.com/wp-content/uploads/shutterstock_423422092.jpg",
       mainDescription: "Revitalize your marketing strategy with Ideanest Email Marketing services. Our comprehensive email marketing solutions are tailored to catapult your business into the spotlight, fostering meaningful connections with your audience. From designing visually stunning and responsive email campaigns to crafting compelling content, we ensure your messages resonate with recipients.",
       secondDescription: "Ideanest combines cutting-edge technology with strategic insights to optimize your email campaigns, maximizing reach and engagement. Our services cover every aspect of email marketing, including list management, segmentation, and analytics, providing you with actionable insights for continuous improvement.",
       thirdDescription: "Gain a competitive edge in the digital landscape by leveraging Ideanest Email Marketing services. Whether you're nurturing leads, promoting products, or building brand loyalty, our team is dedicated to enhancing your email marketing effectiveness. Experience the impact of targeted and personalized communication – choose Ideanest for a results-driven approach to email marketing success."
@@ -82,18 +81,25 @@ const DigitalMarketing = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section with Background Image */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(17, 24, 39, 0.85) 0%, rgba(30, 41, 59, 0.85) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1500&h=800&fit=crop')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          
+        >
+          <source src="https://www.pexels.com/download/video/3141208/" type="video/mp4" />
+        </video>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-gray-900/70" />
+
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
         </div>
@@ -157,7 +163,7 @@ const DigitalMarketing = () => {
             </p>
           </div>
 
-          {/* Service Tabs - Scrollable on Mobile */}
+          {/* Service Tabs */}
           <div className="mb-8 flex flex-wrap gap-3 justify-center">
             {services.map((service, index) => (
               <button
@@ -283,36 +289,12 @@ const DigitalMarketing = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: TrendingUp,
-                title: "SEO & SEM",
-                description: "Boost your visibility on search engines and capture high-intent traffic"
-              },
-              {
-                icon: Share2,
-                title: "Social Media",
-                description: "Build community engagement and brand loyalty across social platforms"
-              },
-              {
-                icon: PenTool,
-                title: "Content Marketing",
-                description: "Create compelling content that resonates with your target audience"
-              },
-              {
-                icon: BarChart3,
-                title: "PPC Advertising",
-                description: "Drive immediate traffic and conversions with targeted paid campaigns"
-              },
-              {
-                icon: Mail,
-                title: "Email Marketing",
-                description: "Nurture leads and maintain customer relationships through email"
-              },
-              {
-                icon: Target,
-                title: "Analytics & Optimization",
-                description: "Track performance and continuously improve your digital strategy"
-              }
+              { icon: TrendingUp, title: "SEO & SEM", description: "Boost your visibility on search engines and capture high-intent traffic" },
+              { icon: Share2, title: "Social Media", description: "Build community engagement and brand loyalty across social platforms" },
+              { icon: PenTool, title: "Content Marketing", description: "Create compelling content that resonates with your target audience" },
+              { icon: BarChart3, title: "PPC Advertising", description: "Drive immediate traffic and conversions with targeted paid campaigns" },
+              { icon: Mail, title: "Email Marketing", description: "Nurture leads and maintain customer relationships through email" },
+              { icon: Target, title: "Analytics & Optimization", description: "Track performance and continuously improve your digital strategy" }
             ].map((service, index) => {
               const Icon = service.icon
               return (
@@ -352,28 +334,13 @@ const DigitalMarketing = () => {
       {/* Animation Styles */}
       <style jsx>{`
         @keyframes blob {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
         }
-
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
       `}</style>
     </div>
   )

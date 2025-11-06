@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 
 const StartYourBusiness = () => {
   const [activeTab, setActiveTab] = useState(0)
-
   const navigate = useNavigate()
 
   const services = [
@@ -12,7 +11,7 @@ const StartYourBusiness = () => {
       id: 1,
       title: "Private Limited Company",
       color: "from-blue-500 to-blue-600",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
+      image: "https://webixytech.com/admin_panel/assets/project_images/1625120256What_is_an_IT_company.jpg",
       mainDescription: "Ideanest explains that an Indian Private Limited Company represents a blend of a partnership firm and a publicly-traded entity, requiring a minimum of two individuals for registration. In this structure, participants can serve as both shareholders and directors. The company shields shareholders from personal liability and legal consequences. Each member's liability is confined to their shareholding.",
       secondDescription: "Upon receiving the Certificate of Incorporation, a Private Limited Company can commence operations, typically within 15 business days. This business structure offers credibility, ease in raising capital, and protection for owners. Private Limited Companies are ideal for entrepreneurs looking to establish a formal, legally recognized business entity with limited personal liability.",
       thirdDescription: "With Ideanest's expert guidance, setting up a Private Limited Company becomes seamless. We handle all documentation, regulatory compliance, and filing procedures, ensuring your business is registered correctly and efficiently."
@@ -21,7 +20,7 @@ const StartYourBusiness = () => {
       id: 2,
       title: "Limited Liability Partnership",
       color: "from-purple-500 to-purple-600",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
+      image: "https://www.hibberts.com/wp-content/uploads/2022/11/Limited-Company-vs-Partnership-blog-151122.jpg",
       mainDescription: "Ideanest explains that a Limited Liability Partnership (LLP), commonly known as an LLP, embodies features resembling both traditional partnerships and corporations. LLP registration has surged in popularity primarily due to its simplicity in formation and maintenance, offering owners protection against lawsuits. This structure presents the greatest advantage over traditional partnerships.",
       secondDescription: "LLPs combine the benefits of private limited companies and partnership firms, making them ideal for various businesses. Individual partners are shielded from joint liability resulting from another partner's misconduct. This structure is particularly favored by professionals, microbusinesses, and small businesses with a limited group of shareholders. LLP registration stands out as the easiest and most transparent process, blending the benefits of a company and a partnership firm.",
       thirdDescription: "Ideanest provides comprehensive LLP registration services, guiding you through each step of the process and ensuring complete compliance with regulatory requirements."
@@ -30,7 +29,7 @@ const StartYourBusiness = () => {
       id: 3,
       title: "Proprietorship",
       color: "from-amber-500 to-amber-600",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
+      image: "https://www.usemultiplier.com/wp-content/uploads/2023/03/sole-proprietorship-examples.webp",
       mainDescription: "Ideanest describes a sole proprietorship firm as a business structure where a single individual holds complete authority over management, ownership, and decision-making. The owner is titled as the Sole Proprietor of the Firm, with no legal differentiation between the promoter and the business entity itself, as it is operated by an individual. All profits accrue solely to the promoter.",
       secondDescription: "Notably, no formal registration is necessary for a Sole Proprietorship firm. The principal advantage lies in its straightforward establishment process, facilitated by minimal legal documentation and lower startup expenses. This structure is perfect for individuals starting their entrepreneurial journey with minimal investment and regulatory requirements.",
       thirdDescription: "Ideanest simplifies the proprietorship setup process, providing guidance on GST registration, tax compliance, and other essential business requirements for your sole proprietorship."
@@ -39,7 +38,7 @@ const StartYourBusiness = () => {
       id: 4,
       title: "GST Registration",
       color: "from-green-500 to-green-600",
-      image: "https://images.unsplash.com/photo-1560264357-8d9766400ab5?w=600&h=500&fit=crop",
+      image: "https://www.bajajfinservmarkets.in/content/dam/bajajmarkets/blog-assets/listing-pages/60-percent-top-banner/Components%20of%20GST%20in%20India.webp",
       mainDescription: "Ideanest outlines the current scenario regarding Goods and Service Tax (GST) registration, noting that all goods and services, with the exception of petroleum products, are presently subject to GST. GST amalgamates state and central indirect taxes into a unified tax system, ensuring consistent taxation across the nation. Previously, various taxes including excise, VAT, and entertainment tax were levied differently.",
       secondDescription: "Now, businesses with a turnover up to Rs 40 lakh are exempt from GST, while those with turnovers up to Rs 1.5 crore can opt for the Composition Scheme, paying only 1% tax. The exemption limit for services remains at Rs 20 lakhs. Additionally, service providers with revenues up to 50 lakhs can utilize the composition plan, paying only 6% tax. Entities with annual sales exceeding INR 40 lakh must register for GST, enabling them to benefit from Input Tax Credit.",
       thirdDescription: "Furthermore, interstate transactions of goods or services mandate GST registration. Ideanest provides complete GST registration and compliance services, ensuring your business operates smoothly within regulatory frameworks."
@@ -48,7 +47,7 @@ const StartYourBusiness = () => {
       id: 5,
       title: "AGNIi Program",
       color: "from-red-500 to-red-600",
-      image: "https://images.unsplash.com/photo-1559721468-cd4628902d4a?w=600&h=500&fit=crop",
+      image: "https://happay.com/blog/wp-content/uploads/sites/12/2023/08/corporate-accounting.webp",
       mainDescription: "Ideanest introduces AGNIi as a program initiated by the Office of the Principal Scientific Adviser to the Government of India, operating under the Prime Minister's Science, Technology, and Innovation Advisory Council (PM-STIAC). Housed within Invest India, the National Investment Promotion Agency, AGNIi aims to expedite the commercialization of Indian technological innovations.",
       secondDescription: "It facilitates the convergence of leading technologists and their market-ready innovations, sourced from startups and research laboratories, with prominent technology adopters from domestic and international enterprises, government entities, and non-profit organizations. AGNIi bridges the gap between technology providers and users, facilitating the dissemination of technology to where it is most needed.",
       thirdDescription: "Through the AGNIi program, your innovative startup can gain access to potential investors, government support, and industry experts. Ideanest assists in AGNIi registration and compliance for technology-based startups."
@@ -57,7 +56,7 @@ const StartYourBusiness = () => {
       id: 6,
       title: "GeM Registration",
       color: "from-indigo-500 to-indigo-600",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
+      image: "https://tenderduniya.com/asset/img/gem.png",
       mainDescription: "Ideanest highlights the Government of India's initiative, the Government E-Marketplace (GeM), designed to bring transparency to the procurement process for government agencies. GeM aims to enhance transparency, efficiency, and swiftness in governmental procurement and employment. Through this platform, both sellers and buyers can register and engage in transactions with the government.",
       secondDescription: "GeM streamlines vendor registration, payment, and order posting processes, minimizing human intervention. As an open platform, it welcomes legitimate providers without entry barriers, ensuring fair business opportunities. SMS and email notifications are sent to purchasers, association presidents, payment authorities, and sellers at each stage of the transaction process.",
       thirdDescription: "With Ideanest's GeM registration assistance, your business can unlock opportunities to sell products and services directly to government agencies, expanding your market reach and ensuring timely payments."
@@ -73,18 +72,25 @@ const StartYourBusiness = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section with Background Image */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(17, 24, 39, 0.85) 0%, rgba(30, 41, 59, 0.85) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1500&h=800&fit=crop')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        {/* Video BG */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        >
+          <source src="https://www.pexels.com/download/video/8503288/" type="video/mp4" />
+        </video>
+
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-gray-900/70" />
+
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
         </div>
@@ -101,10 +107,10 @@ const StartYourBusiness = () => {
             Comprehensive business registration and compliance solutions to launch your entrepreneurial journey with confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+            <button onClick={() => navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
-            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
+            <button onClick={() => navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
               Learn More
             </button>
           </div>
@@ -186,7 +192,7 @@ const StartYourBusiness = () => {
                   <p className="text-gray-700 mb-8 leading-relaxed text-justify">
                     {services[activeTab].thirdDescription}
                   </p>
-                  <button onClick={()=>navigate('/contact')} className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 inline-flex items-center gap-2">
+                  <button onClick={() => navigate('/contact')} className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 inline-flex items-center gap-2">
                     Get Started <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -274,36 +280,12 @@ const StartYourBusiness = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: Building2,
-                title: "Company Registration",
-                description: "Register your Private Limited Company with complete documentation and compliance"
-              },
-              {
-                icon: Users,
-                title: "LLP Formation",
-                description: "Establish a Limited Liability Partnership with minimal documentation"
-              },
-              {
-                icon: FileText,
-                title: "GST Registration",
-                description: "Hassle-free GST registration and compliance management"
-              },
-              {
-                icon: Target,
-                title: "Business Consultation",
-                description: "Expert advice on choosing the right business structure for your needs"
-              },
-              {
-                icon: Globe,
-                title: "Government Programs",
-                description: "Registration and guidance for AGNIi and GeM programs"
-              },
-              {
-                icon: Briefcase,
-                title: "Legal Compliance",
-                description: "Complete legal documentation and regulatory compliance support"
-              }
+              { icon: Building2, title: "Company Registration", description: "Register your Private Limited Company with complete documentation and compliance" },
+              { icon: Users, title: "LLP Formation", description: "Establish a Limited Liability Partnership with minimal documentation" },
+              { icon: FileText, title: "GST Registration", description: "Hassle-free GST registration and compliance management" },
+              { icon: Target, title: "Business Consultation", description: "Expert advice on choosing the right business structure for your needs" },
+              { icon: Globe, title: "Government Programs", description: "Registration and guidance for AGNIi and GeM programs" },
+              { icon: Briefcase, title: "Legal Compliance", description: "Complete legal documentation and regulatory compliance support" }
             ].map((service, index) => {
               const Icon = service.icon
               return (
@@ -330,10 +312,10 @@ const StartYourBusiness = () => {
             Let Ideanest handle all your business registration needs while you focus on building your dreams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={()=>navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
+            <button onClick={() => navigate('/contact')} className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation
             </button>
-            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
+            <button onClick={() => navigate('/contact')} className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 transition-all duration-300">
               Learn More
             </button>
           </div>
@@ -343,28 +325,13 @@ const StartYourBusiness = () => {
       {/* Animation Styles */}
       <style jsx>{`
         @keyframes blob {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
         }
-
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
       `}</style>
     </div>
   )
