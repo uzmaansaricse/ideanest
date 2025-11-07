@@ -65,7 +65,7 @@ const DigitalMarketing = () => {
       id: 7,
       title: "Email Marketing",
       color: "from-indigo-500 to-indigo-600",
-      image: "https://www.site-seeker.com/wp-content/uploads/2025/08/STUDIO-ANG-098-45-300x279-3.jpg",
+      image: "h.png",
       mainDescription: "Revitalize your marketing strategy with Ideanest Email Marketing services. Our comprehensive email marketing solutions are tailored to catapult your business into the spotlight, fostering meaningful connections with your audience. From designing visually stunning and responsive email campaigns to crafting compelling content, we ensure your messages resonate with recipients.",
       secondDescription: "Ideanest combines cutting-edge technology with strategic insights to optimize your email campaigns, maximizing reach and engagement. Our services cover every aspect of email marketing, including list management, segmentation, and analytics, providing you with actionable insights for continuous improvement.",
       thirdDescription: "Gain a competitive edge in the digital landscape by leveraging Ideanest Email Marketing services. Whether you're nurturing leads, promoting products, or building brand loyalty, our team is dedicated to enhancing your email marketing effectiveness. Experience the impact of targeted and personalized communication – choose Ideanest for a results-driven approach to email marketing success."
