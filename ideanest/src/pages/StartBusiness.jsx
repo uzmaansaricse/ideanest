@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ArrowRight, Building2, Users, FileText, Zap, CheckCircle, Target, Globe, Briefcase } from 'lucide-react'
+import agni from '../assets/agni.jpeg'
 import { useNavigate } from 'react-router-dom'
 
 const StartYourBusiness = () => {
@@ -47,7 +48,7 @@ const StartYourBusiness = () => {
       id: 5,
       title: "AGNIi Program",
       color: "from-red-500 to-red-600",
-      image: "https://happay.com/blog/wp-content/uploads/sites/12/2023/08/corporate-accounting.webp",
+      image: 'https://media.assettype.com/ficl%2F2021-12%2Fddb56f07-628f-407c-a469-7bdfdb660da1%2FUntitled_design.png',
       mainDescription: "Ideanest introduces AGNIi as a program initiated by the Office of the Principal Scientific Adviser to the Government of India, operating under the Prime Minister's Science, Technology, and Innovation Advisory Council (PM-STIAC). Housed within Invest India, the National Investment Promotion Agency, AGNIi aims to expedite the commercialization of Indian technological innovations.",
       secondDescription: "It facilitates the convergence of leading technologists and their market-ready innovations, sourced from startups and research laboratories, with prominent technology adopters from domestic and international enterprises, government entities, and non-profit organizations. AGNIi bridges the gap between technology providers and users, facilitating the dissemination of technology to where it is most needed.",
       thirdDescription: "Through the AGNIi program, your innovative startup can gain access to potential investors, government support, and industry experts. Ideanest assists in AGNIi registration and compliance for technology-based startups."

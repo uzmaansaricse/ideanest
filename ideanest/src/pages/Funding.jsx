@@ -56,7 +56,7 @@ const Funding = () => {
       id: 6,
       title: "Project Finance",
       color: "from-indigo-500 to-indigo-600",
-      image: "https://img500.exportersindia.com/product_images/bc-500/2022/6/9132144/project-finance-services-1656136272-6414194.jpeg",
+      image: "https://fundwise.uk/wp-content/uploads/2025/03/10-Key-Stages-of-the-Project-Finance-Lifecycle-1024x683.jpg",
       mainDescription: "At Ideanest, we embrace a forward-thinking approach to financing, and Project Finance stands out as a transformative method that goes beyond traditional credit lending systems. Unlike the conventional reliance on assets and balance sheets, Project Finance leverages the promising nature of a project and its anticipated future revenues as a guarantee for the loan amount.",
       secondDescription: "Key Characteristics of our Project Finance approach include: Future-Revenue Guarantee based on project cash flows, Project-Centric Approach focusing on project viability, and suitability for Ideal Long-Term Endeavors. This financing model is perfect for infrastructure projects, technology ventures, and large-scale initiatives.",
       thirdDescription: "Join Ideanest in embracing the evolution of financing through Project Finance, where the success of your project becomes the cornerstone for a thriving and sustainable future."
@@ -65,7 +65,7 @@ const Funding = () => {
       id: 7,
       title: "Unsecured Business Loans",
       color: "from-cyan-500 to-cyan-600",
-      image: "https://navi.com/blog/wp-content/uploads/2022/05/shutterstock_1670366098-1-1.jpg",
+      image: "https://d28wu8o6itv89t.cloudfront.net/images/Unsesureddebtjpg-1705908626717.jpeg",
       mainDescription: "Ease your loan worries with Ideanest! Bid farewell to collateral concerns when seeking funds for your business journey. Unsecured business loans are the lifeline for budding entrepreneurs and those navigating financial challenges without the burden of collateral.",
       secondDescription: "At Ideanest, we cater to businesses lacking the capacity for collateral, offering unsecured business loans that cover a spectrum of needs. Whether it's bolstering working capital, acquiring machinery, expanding operations, or enhancing cash flow, this loan type is tailor-made for businesses in urgent need of credit without the ability to provide collateral.",
       thirdDescription: "Secure your business's financial future with Ideanest and embrace the freedom of unsecured business loans! Our streamlined approval process and flexible terms ensure that your business gets the funding it needs quickly and efficiently."

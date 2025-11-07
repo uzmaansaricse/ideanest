@@ -5,6 +5,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import roshankumar from '../assets/roshankumar.png'
 import bringup from '../assets/bringup.png'
 import amanjha from '../assets/amanjha.png'
+import bastone from '../assets/bastone.jpeg'
+import cardswedding from '../assets/cardswedding.jpeg'
+import photography from '../assets/photography.jpeg'
+import ssshotel from '../assets/ssshotel.jpeg'
 import ClutchBadges from '../components/Clutchbadges'
 
 
@@ -107,28 +111,58 @@ const Home = () => {
 
   // Testimonials data
   const testimonials = [
-    {
-      name: "ROSHAN KUMAR",
-      company: "i.Chem",
-      image: roshankumar,
-      rating: 5,
-      text: "Best services, affordable prices and amazing team to support start ups for best digital solutions."
-    },
-    {
-      name: "AAYUSH PANDEY",
-      company: "Startup Founder",
-      image: bringup,
-      rating: 5,
-      text: "I'm really impressed by the professionalism and quality of products delivered. I would highly recommend upcoming startups to opt for their services."
-    },
-    {
-      name: "AMAN JHA",
-      company: "Jha Motors",
-      image: amanjha,
-      rating: 5,
-      text: "I highly recommend IDEANEST to anyone looking for topnotch service and a memorable experience."
-    }
-  ]
+  {
+    name: "ROSHAN KUMAR",
+    company: "i.Chem",
+    image: roshankumar,
+    rating: 5,
+    text: "Best services, affordable prices and amazing team to support start ups for best digital solutions."
+  },
+  {
+    name: "AAYUSH PANDEY",
+    company: "Startup Founder",
+    image: bringup,
+    rating: 5,
+    text: "I'm really impressed by the professionalism and quality of products delivered. I would highly recommend upcoming startups to opt for their services."
+  },
+  {
+    name: "AMAN JHA",
+    company: "Jha Motors",
+    image: amanjha,
+    rating: 5,
+    text: "I highly recommend IDEANEST to anyone looking for topnotch service and a memorable experience."
+  },
+
+  // New additions
+  {
+    name: "B Agrawal Stone Products Limited",
+    company: "Construction Materials",
+    image: bastone,
+    rating: 5,
+    text: "Reliable guidance and fast execution. The team helped us streamline registrations and go-to-market with confidence."
+  },
+  {
+    name: "Hotel Satyam Shivam Sundaram",
+    company: "Hospitality",
+    image: ssshotel,
+    rating: 5,
+    text: "Excellent support across branding, web presence, and compliance—our online bookings and visibility improved significantly."
+  },
+  {
+    name: "M/s Sudhir Crushing Works",
+    company: "Mining & Aggregates",
+    image: cardswedding,
+    rating: 5,
+    text: "Professional, responsive, and thorough. Their documentation and funding guidance saved us time and effort."
+  },
+  {
+    name: "Mr. Piyush Tripathi",
+    company: "Photography Business",
+    image: photography,
+    rating: 5,
+    text: "From portfolio website to digital marketing, the results have been fantastic. Highly recommended for creative businesses."
+  }
+]
 
 
   // Auto-advance testimonials
@@ -630,7 +664,7 @@ const Home = () => {
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover"
+                      className=" h-16 rounded-full object-cover"
                     />
                     <div>
                       <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>

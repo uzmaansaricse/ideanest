@@ -11,7 +11,7 @@ const DigitalMarketing = () => {
       id: 1,
       title: "Digital Marketing",
       color: "from-blue-500 to-blue-600",
-      image: "https://yittbox.com/BlogImages/Importance-of-Digital-Marketing.jpg",
+      image: "https://www.bsmtech.co.in/wp-content/uploads/2025/09/Digital-Marketing-services-1.png",
       mainDescription: "At Ideanest, we understand the dynamic nature of the digital realm and tailor our solutions to amplify your brand's visibility and engagement. From optimizing your website for search engines to creating compelling social media strategies, we employ the latest techniques to drive targeted traffic and enhance your online reach. Our experienced team of digital marketers is dedicated to delivering measurable results, ensuring a strong return on investment.",
       secondDescription: "Supercharge your online presence with Ideanest cutting-edge Digital Marketing Services. We specialize in crafting strategic digital campaigns that propel your business to the forefront of the digital landscape. Our comprehensive services encompass social media marketing, search engine optimization (SEO), content marketing, and more.",
       thirdDescription: "Ignite your brand's digital journey with Ideanest and let our Digital Marketing Services propel your business to new heights in the ever-evolving online marketplace."
@@ -38,7 +38,7 @@ const DigitalMarketing = () => {
       id: 4,
       title: "PPC Marketing",
       color: "from-red-500 to-red-600",
-      image: "https://localo.com/assets/img/definitions/what-is-ppc.webp",
+      image: "https://www.searchenginejournal.com/wp-content/uploads/2023/10/ppc-management_sej-805.jpg",
       mainDescription: "Supercharge your digital visibility with Ideanest expert PPC Marketing services. Our Pay-Per-Click solutions are tailored to elevate your online presence, driving targeted traffic and maximizing your ROI. With a strategic approach to keyword research, ad creation, and campaign management, Ideanest ensures your brand stands out in the competitive digital landscape.",
       secondDescription: "Our PPC specialists craft compelling ad campaigns across platforms like Google Ads and social media, precisely targeting your audience and generating measurable results. Whether you're a startup looking for an initial boost or an established business aiming for enhanced online visibility, Ideanest delivers data-driven PPC strategies that align with your goals.",
       thirdDescription: "Stay ahead of the curve and amplify your online impact with Ideanest PPC Marketing services—where every click counts towards your business success."
@@ -65,7 +65,7 @@ const DigitalMarketing = () => {
       id: 7,
       title: "Email Marketing",
       color: "from-indigo-500 to-indigo-600",
-      image: "https://www.outboundengine.com/wp-content/uploads/shutterstock_423422092.jpg",
+      image: "https://www.site-seeker.com/wp-content/uploads/2025/08/STUDIO-ANG-098-45-300x279-3.jpg",
       mainDescription: "Revitalize your marketing strategy with Ideanest Email Marketing services. Our comprehensive email marketing solutions are tailored to catapult your business into the spotlight, fostering meaningful connections with your audience. From designing visually stunning and responsive email campaigns to crafting compelling content, we ensure your messages resonate with recipients.",
       secondDescription: "Ideanest combines cutting-edge technology with strategic insights to optimize your email campaigns, maximizing reach and engagement. Our services cover every aspect of email marketing, including list management, segmentation, and analytics, providing you with actionable insights for continuous improvement.",
       thirdDescription: "Gain a competitive edge in the digital landscape by leveraging Ideanest Email Marketing services. Whether you're nurturing leads, promoting products, or building brand loyalty, our team is dedicated to enhancing your email marketing effectiveness. Experience the impact of targeted and personalized communication – choose Ideanest for a results-driven approach to email marketing success."
