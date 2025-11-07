@@ -24,7 +24,7 @@ const Home = () => {
   const slides = [
     {
       title: "Transform Your Startup Vision",
-      description: "We help early-stage startups turn ideas into reality with expert guidance and strategic enhancement",
+      description: "We help early-stage startups turn ideas into reality with expert guidance ",
       image: "https://media.assettype.com/outlookbusiness/import/outlookmoney/public/uploads/article/gallery/f79cf41dff86b52bbc15d8bb7f7b8879.jpg?w=801&auto=format%2Ccompress&fit=max&format=webp&dpr=1.0",
       icon: Lightbulb
     },
@@ -306,7 +306,7 @@ const Home = () => {
 
 
           {/* Slider */}
-          <div className="relative h-96 sm:h-[500px] rounded-2xl overflow-hidden bg-white shadow-2xl">
+          <div className="relative h-96 sm:min-h-[500px] rounded-2xl overflow-hidden bg-white shadow-2xl">
             {/* Slides */}
             {slides.map((slide, index) => {
               const Icon = slide.icon
@@ -361,13 +361,13 @@ const Home = () => {
             {/* Navigation buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-yellow-400 hover:bg-yellow-500 text-gray-900 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-yellow-400/50"
+              className="absolute left-[-8] lg:left-4 top-1/2 transform -translate-y-1/2 z-20 bg-yellow-400 hover:bg-yellow-500 text-gray-900 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-yellow-400/50"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-yellow-400 hover:bg-yellow-500 text-gray-900 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-yellow-400/50"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-yellow-400 hover:bg-yellow-500 text-gray-900 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-yellow-400/50"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
