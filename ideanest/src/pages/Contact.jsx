@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
-
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +13,12 @@ const Contact = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('YOUR_PUBLIC_KEY') // Replace with your EmailJS public key
+  }, [])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -23,31 +28,50 @@ const Contact = () => {
     }))
   }
 
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
 
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'YOUR_SERVICE_ID',        // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID',       // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          to_name: 'IdeaNest Team',
+        }
+      )
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+      console.log('Email sent successfully:', result.text)
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      })
 
+      // Hide success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000)
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      service: '',
-      message: ''
-    })
-
-
-    setTimeout(() => setIsSubmitted(false), 5000)
+    } catch (error) {
+      console.error('Email sending failed:', error)
+      setError('Failed to send message. Please try again or contact us directly.')
+      setIsSubmitting(false)
+    }
   }
-
 
   const services = [
     'Startup India Certificate',
@@ -60,7 +84,6 @@ const Contact = () => {
     'Digital Marketing',
     'General Consultation'
   ]
-
 
   const contactInfo = [
     {
@@ -89,10 +112,8 @@ const Contact = () => {
     }
   ]
 
-
   return (
     <div className="bg-white">
-
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 via-white to-orange-50">
@@ -100,7 +121,6 @@ const Contact = () => {
           <div className="absolute top-20 -left-40 w-80 h-80 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
           <div className="absolute top-40 -right-40 w-80 h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
         </div>
-
 
         <div className="relative max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
@@ -126,7 +146,6 @@ const Contact = () => {
         </div>
       </section>
 
-
       {/* Contact Form & Info Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -138,7 +157,6 @@ const Contact = () => {
               <p className="text-gray-600 mb-8">
                 Fill out the form below and we'll get back to you within 24 hours with a personalized response.
               </p>
-
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -174,7 +192,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -206,7 +223,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-
                 <div>
                   <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
                     Service of Interest
@@ -225,7 +241,6 @@ const Contact = () => {
                   </select>
                 </div>
 
-
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
                     Message *
@@ -241,7 +256,6 @@ const Contact = () => {
                     placeholder="Tell us about your startup and how we can help..."
                   />
                 </div>
-
 
                 <button
                   type="submit"
@@ -262,7 +276,6 @@ const Contact = () => {
                 </button>
               </form>
 
-
               {isSubmitted && (
                 <div className="mt-6 bg-green-50 border-l-4 border-green-500 p-4 rounded-lg">
                   <div className="flex items-center gap-3">
@@ -274,8 +287,15 @@ const Contact = () => {
                   </div>
                 </div>
               )}
-            </div>
 
+              {error && (
+                <div className="mt-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="text-red-800">{error}</div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Contact Info */}
             <div className="space-y-8">
@@ -285,7 +305,6 @@ const Contact = () => {
                   Multiple ways to reach us. Choose the method that works best for you.
                 </p>
               </div>
-
 
               <div className="space-y-6">
                 {contactInfo.map((info, index) => {
@@ -311,7 +330,6 @@ const Contact = () => {
         </div>
       </section>
 
-
       {/* Animations */}
       <style jsx>{`
         @keyframes blob {
@@ -326,11 +344,9 @@ const Contact = () => {
           }
         }
 
-
         .animate-blob {
           animation: blob 7s infinite;
         }
-
 
         .animation-delay-2000 {
           animation-delay: 2s;
@@ -339,6 +355,5 @@ const Contact = () => {
     </div>
   )
 }
-
 
 export default Contact

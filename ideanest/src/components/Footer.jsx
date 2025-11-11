@@ -23,14 +23,14 @@ const Footer = () => {
       { name: 'Contact', href: '/contact' },
     ],
     services: [
-      { name: 'Startup India Certificate', href: '#startup' },
-      { name: 'MSME Certificate', href: '#msme' },
-      { name: 'GST Registration', href: '#gst' },
-      { name: 'All Types of ISO Certification', href: '#iso' },
-      { name: 'Trademark & Company Registration', href: '#trademark' },
-      { name: 'Funding & Investment Support', href: '#funding' },
-      { name: 'Web Design & Development', href: '#web' },
-      { name: 'Digital Marketing', href: '#digital' },
+      { name: 'Startup India Certificate', href: '/certificates' },
+      { name: 'MSME Certificate', href: '/certificates' },
+      { name: 'GST Registration', href: '/certificates' },
+      { name: 'All Types of ISO Certification', href: '/certificates' },
+      { name: 'Trademark & Company Registration', href: '/certificates' },
+      { name: 'Funding & Investment Support', href: '/funding' },
+      { name: 'Web Design & Development', href: '/web-development' },
+      { name: 'Digital Marketing', href: '/digital-marketing' },
     ],
   }
 
@@ -155,7 +155,7 @@ const Footer = () => {
                       </div>
                       <div>
                         <p className="text-gray-900 font-semibold text-sm">
-                          B128 B block <br /> 2nd floor  <br /> noida sector 63 <br /> 201031
+                          B128, B-block, 2nd floor, Noida, Sector-63,PIN-201031
                         </p>
                       </div>
                     </div>
